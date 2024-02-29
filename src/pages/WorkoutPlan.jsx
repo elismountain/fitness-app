@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import calculateBMI from '../components/BMI';
 import EmojiTracker from '../components/emoji';
+import exerciseAPI from '../components/exerciseapi';
 
 const WorkoutPlan = () => {
   const location = useLocation();
@@ -36,6 +37,23 @@ const WorkoutPlan = () => {
         });
     }
   }, [weight, height]); 
+
+  // trial 
+  useEffect(() => {
+    // Check if height and weight are valid numbers before calling calculateBMI
+    
+      // Assuming calculateBMI expects two arguments: weight and height
+      exerciseAPI(goal)
+        .then(data => {
+          console.log(data);
+          // Check if data and data.bmi exist before calling setBmi to avoid errors
+      
+        })
+        .catch(error => {
+          console.error('Error fetching BMI:', error);
+        });
+    
+  }, [goal]); 
 
 
 
