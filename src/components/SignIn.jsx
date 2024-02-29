@@ -60,7 +60,7 @@ const SignIn = ({ onSubmit }) => {
   };
 
   return (
-    <Container className="d-flex justify-content-center align-items-center vh-100">
+    <Container className="d-flex justify-content-center align-items-center vh-75">
       <Row>
         <Col>
           <Form onSubmit={handleSubmit} style={{ minWidth: '700px' }}>

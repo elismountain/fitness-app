@@ -12,16 +12,24 @@ import { Route, Routes } from 'react-router-dom';
 
 const App = () => {
   return (
-    <Box width="400px" sx={{ width: { xl: '1488px' }}} m="auto">
+    <Box
+      display="flex"
+      flexDirection="column"
+      minHeight="100vh"
+      justifyContent="space-between"
+    >
       <MyNavbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/exercise/:id" element={<ExerciseDetail />} />
-        <Route path="/workout-plan" element={<WorkoutPlan />} />
-      </Routes>
+      <Box>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/exercise/:id" element={<ExerciseDetail />} />
+          <Route path="/workout-plan" element={<WorkoutPlan />} />
+        </Routes>
+      </Box>
       <Footer />
     </Box>
-  )
-}
+  );
+};
+
 
 export default App;
