@@ -93,4 +93,4 @@ function SignUpForm() {
   );
 }
 
-export default FormExample;
+export default SignUpForm;
