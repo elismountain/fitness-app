@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import calculateBMI from '../components/BMI';
+import EmojiTracker from '../components/emoji';
 
 const WorkoutPlan = () => {
   const location = useLocation();
@@ -14,6 +15,8 @@ const WorkoutPlan = () => {
 
   const [bmi, setBmi] = useState('');
 
+
+  // useeffect hook to calculate bmi
   useEffect(() => {
     // Check if height and weight are valid numbers before calling calculateBMI
     if (!isNaN(height) && !isNaN(weight)) {
@@ -34,6 +37,8 @@ const WorkoutPlan = () => {
     }
   }, [weight, height]); 
 
+
+
   return (
     <div>
       <h2>Welcome , {username}</h2>
@@ -42,6 +47,8 @@ const WorkoutPlan = () => {
     
         {bmi && <p>Your BMI is: {bmi.toFixed(2)}</p>}
         {goal && <p>Goal for today : {goal}</p>}
+        <p>How are you feeling today?</p>
+        <div>{EmojiTracker()}</div>
       </div>
     </div>
   );
