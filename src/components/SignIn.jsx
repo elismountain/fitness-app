@@ -24,21 +24,21 @@ const SignIn = ({ onSubmit }) => {
       setNameError('');
     }
 
-    if (!age.trim()) {
+    if (!age.trim() || parseInt(age) < 0) {
       setAgeError('Age is required');
       return;
     } else {
       setAgeError('');
     }
 
-    if (!weight.trim()) {
+    if (!weight.trim() || parseInt(weight) < 0) {
       setWeightError('Weight is required');
       return;
     } else {
       setWeightError('');
     }
 
-    if (!height.trim()) {
+    if (!height.trim() || parseInt(height) < 0) {
       setHeightError('Height is required');
       return;
     } else {
@@ -84,28 +84,31 @@ const SignIn = ({ onSubmit }) => {
                 onChange={(e) => setAge(e.target.value)}
                 placeholder="Enter your age"
                 isInvalid={!!ageError}
+                min="10"
               />
               <Form.Control.Feedback type="invalid">{ageError}</Form.Control.Feedback>
             </Form.Group>
             <Form.Group controlId="weight">
-              <Form.Label>Weight (in Kilograms) : </Form.Label>
+              <Form.Label>Weight (in kg) : </Form.Label>
               <Form.Control
                 type="number"
                 value={weight}
                 onChange={(e) => setWeight(e.target.value)}
                 placeholder="Enter your weight"
                 isInvalid={!!weightError}
+                min="10"
               />
               <Form.Control.Feedback type="invalid">{weightError}</Form.Control.Feedback>
             </Form.Group>
             <Form.Group controlId="height">
-              <Form.Label>Height (in meters) :</Form.Label>
+              <Form.Label>Height (in cm) :</Form.Label>
               <Form.Control
                 type="number"
                 value={height}
                 onChange={(e) => setHeight(e.target.value)}
                 placeholder="Enter your height"
                 isInvalid={!!heightError}
+                min="10"
               />
               <Form.Control.Feedback type="invalid">{heightError}</Form.Control.Feedback>
             </Form.Group>
