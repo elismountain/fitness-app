@@ -86,7 +86,42 @@ const SignIn = ({ onSubmit }) => {
               />
               <Form.Control.Feedback type="invalid">{ageError}</Form.Control.Feedback>
             </Form.Group>
-            {/* Repeat Form.Group for weight, height, goal similarly */}
+            <Form.Group controlId="weight">
+              <Form.Label>Weight:</Form.Label>
+              <Form.Control
+                type="number"
+                value={weight}
+                onChange={(e) => setWeight(e.target.value)}
+                placeholder="Enter your weight"
+                isInvalid={!!weightError}
+              />
+              <Form.Control.Feedback type="invalid">{weightError}</Form.Control.Feedback>
+            </Form.Group>
+            <Form.Group controlId="height">
+              <Form.Label>Height:</Form.Label>
+              <Form.Control
+                type="number"
+                value={height}
+                onChange={(e) => setHeight(e.target.value)}
+                placeholder="Enter your height"
+                isInvalid={!!heightError}
+              />
+              <Form.Control.Feedback type="invalid">{heightError}</Form.Control.Feedback>
+            </Form.Group>
+            <Form.Group controlId="goal">
+              <Form.Label>Goal:</Form.Label>
+              <Form.Control
+                as="select"
+                value={goal}
+                onChange={(e) => setGoal(e.target.value)}
+                isInvalid={!!goalError}
+              >
+                <option value="">Select goal</option>
+                <option value="Upper Body">Upper Body</option>
+                <option value="Lower Body">Lower Body</option>
+              </Form.Control>
+              <Form.Control.Feedback type="invalid">{goalError}</Form.Control.Feedback>
+            </Form.Group>
             <Button variant="purple" type="submit">
               Submit
             </Button>
