@@ -63,7 +63,7 @@ const SignIn = ({ onSubmit }) => {
     <Container className="d-flex justify-content-center align-items-center vh-100">
       <Row>
         <Col>
-          <Form onSubmit={handleSubmit}>
+          <Form onSubmit={handleSubmit} style={{ minWidth: '700px' }}>
             <Form.Group controlId="name">
               <Form.Label>Name:</Form.Label>
               <Form.Control
@@ -125,7 +125,8 @@ const SignIn = ({ onSubmit }) => {
               </Form.Control>
               <Form.Control.Feedback type="invalid">{goalError}</Form.Control.Feedback>
             </Form.Group>
-            <Button variant="purple" type="submit">
+            <br />
+            <Button variant="primary" size="lg" type="submit">
               I am ready!
             </Button>
           </Form>
