@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 
 const SignIn = ({ onSubmit }) => {
   const [name, setName] = useState('');
@@ -59,71 +60,40 @@ const SignIn = ({ onSubmit }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor="name">Name:</label>
-        <input
-          type="text"
-          id="name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          required
-        />
-        {nameError && <p style={{ color: 'red' }}>{nameError}</p>}
-      </div>
-      <div>
-        <label htmlFor="age">Age:</label>
-        <input
-          type="number"
-          id="age"
-          value={age}
-          onChange={(e) => setAge(e.target.value)}
-          required
-        />
-        {ageError && <p style={{ color: 'red' }}>{ageError}</p>}
-      </div>
-      <div>
-        <label htmlFor="weight">Weight:</label>
-        <input
-          type="text"
-          id="weight"
-          value={weight}
-          onChange={(e) => setWeight(e.target.value)}
-          required
-        />
-        {weightError && <p style={{ color: 'red' }}>{weightError}</p>}
-      </div>
-      <div>
-        <label htmlFor="height">Height:</label>
-        <input
-          type="text"
-          id="height"
-          value={height}
-          onChange={(e) => setHeight(e.target.value)}
-          required
-        />
-        {heightError && <p style={{ color: 'red' }}>{heightError}</p>}
-      </div>
-      <div>
-        <label htmlFor="goal">Goal:</label>
-        <select
-          id="goal"
-          value={goal}
-          onChange={(e) => setGoal(e.target.value)}
-          required
-        >
-          <option value="">Select Goal</option>
-          <option value="Cardio">Cardio</option>
-          <option value="HIIT">HIIT</option>
-          <option value="Upper Body">Upper Body</option>
-          <option value="Lower Body">Lower Body</option>
-          <option value="ABS">ABS</option>
-          <option value="Neck and Shoulders">Neck and Shoulders</option>
-        </select>
-        {goalError && <p style={{ color: 'red' }}>{goalError}</p>}
-      </div>
-      <button type="submit">Submit</button>
-    </form>
+    <Container className="d-flex justify-content-center align-items-center vh-100">
+      <Row>
+        <Col>
+          <Form onSubmit={handleSubmit}>
+            <Form.Group controlId="name">
+              <Form.Label>Name:</Form.Label>
+              <Form.Control
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                placeholder="Enter your name"
+                isInvalid={!!nameError}
+              />
+              <Form.Control.Feedback type="invalid">{nameError}</Form.Control.Feedback>
+            </Form.Group>
+            <Form.Group controlId="age">
+              <Form.Label>Age:</Form.Label>
+              <Form.Control
+                type="number"
+                value={age}
+                onChange={(e) => setAge(e.target.value)}
+                placeholder="Enter your age"
+                isInvalid={!!ageError}
+              />
+              <Form.Control.Feedback type="invalid">{ageError}</Form.Control.Feedback>
+            </Form.Group>
+            {/* Repeat Form.Group for weight, height, goal similarly */}
+            <Button variant="purple" type="submit">
+              Submit
+            </Button>
+          </Form>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 

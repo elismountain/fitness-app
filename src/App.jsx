@@ -1,6 +1,14 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { Box } from '@mui/material';
+import App from './App';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
 
 import './App.css';
 import ExerciseDetail from './pages/ExerciseDetail';
