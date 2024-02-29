@@ -1,0 +1,67 @@
+.timer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.circle {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom right, orange, #b3072c);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.time {
+    font-size: px;
+    color: white;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.buttons button {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 20px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buttons button:hover {
+    background-color: #b3072c;
+}
+
+.records table {
+    width: 600px;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.records table th,
+.records table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.records table th {
+    background-color: white;
+    color: white;
+}
