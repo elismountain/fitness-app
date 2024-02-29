@@ -7,7 +7,7 @@ const HeroBanner = () => {
       mt: { lg: '12px', xs:'70px'},
       ml: { sm: '50px' }
     }}>
-      <Typography color="FF2625" fontWeight="600" fontsize="26px">
+      <Typography color="FF2625" fontWeight="600" fontSize="26px">
         WONDER WOMAN WORKOUT APP
       </Typography>
     </Box>
