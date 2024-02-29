@@ -6,6 +6,7 @@ const WorkoutPlan = () => {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const username = searchParams.get('username');
+  const goal =searchParams.get('goal')
   
   // Directly parse to float here to avoid re-declaring inside useEffect
   const height = parseFloat(searchParams.get('height'));
@@ -35,11 +36,12 @@ const WorkoutPlan = () => {
 
   return (
     <div>
-      <h1>Dashboard</h1>
-      <p>Hi {username}</p>
+      <h2>Welcome , {username}</h2>
+    
       <div>
-        <h1>BMI Calculator Result</h1>
+    
         {bmi && <p>Your BMI is: {bmi.toFixed(2)}</p>}
+        {goal && <p>Goal for today : {goal}</p>}
       </div>
     </div>
   );

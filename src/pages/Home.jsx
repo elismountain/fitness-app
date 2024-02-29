@@ -7,7 +7,7 @@ const Home = () => {
   const navigate = useNavigate();
 
   const handleSubmit = (formData) => {
-    navigate(`/workout-plan?username=${encodeURIComponent(formData.name)}&height=${encodeURIComponent(formData.height)}&weight=${encodeURIComponent(formData.weight)}`);
+    navigate(`/workout-plan?username=${encodeURIComponent(formData.name)}&height=${encodeURIComponent(formData.height)}&weight=${encodeURIComponent(formData.weight)}&goal=${encodeURIComponent(formData.goal)}`);
   };
 
   return (
