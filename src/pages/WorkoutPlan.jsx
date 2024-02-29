@@ -15,6 +15,7 @@ const WorkoutPlan = () => {
   const weight = parseFloat(searchParams.get('weight'));
 
   const [bmi, setBmi] = useState('');
+  const [exercise, setExercise] = useState([])
 
 
   // useeffect hook to calculate bmi
@@ -47,7 +48,7 @@ const WorkoutPlan = () => {
         .then(data => {
           console.log(data);
           // Check if data and data.bmi exist before calling setBmi to avoid errors
-      
+          setExercise(data)
         })
         .catch(error => {
           console.error('Error fetching BMI:', error);
@@ -58,16 +59,25 @@ const WorkoutPlan = () => {
 
 
   return (
-    <div>
-      <h2>Welcome , {username}</h2>
+    <div className='container-fluid'>
+      <h2 style= {{alignItems: "left"}}>Welcome , {username}</h2>
     
-      <div>
+      
     
         {bmi && <p>Your BMI is: {bmi.toFixed(2)}</p>}
         {goal && <p>Goal for today : {goal}</p>}
         <p>How are you feeling today?</p>
         <div>{EmojiTracker()}</div>
+        <div>
+        {exercise.map((exercise, index) => (
+          <div key={index}>
+            
+            {exercise.name}
+            <img src={exercise.gifUrl}></img>
+          </div>
+        ))}
       </div>
+      
     </div>
   );
 };
