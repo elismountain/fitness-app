@@ -132,7 +132,7 @@ const SignIn = ({ onSubmit }) => {
                 <option value="upper%20arms">Upper Arms</option>
                 <option value="upperr%20arms">Upper Arms</option>
                 <option value="waist">Waist</option>
-                <option value="HIIT">HIIT</option> back,cardio,chest,lower arms,lower legs,neck,shoulders,upper arms,upper legs,waist
+                
               </Form.Control>
               <Form.Control.Feedback type="invalid">{goalError}</Form.Control.Feedback>
             </Form.Group>
