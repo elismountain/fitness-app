@@ -7,7 +7,7 @@ import ExerciseDetail from './pages/ExerciseDetail';
 import Home from './pages/Home';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-
+import Contact from './pages/contact'; 
 
 const App = () => {
   return (
@@ -16,10 +16,11 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/exercise/:id" element={<ExerciseDetail />} />
+        <Route path="/contact" element={<Contact />} /> {/* This line adds the Contact route */}
       </Routes>
       <Footer />
     </Box>
   )
 }
 
-export default App
+export default App;
