@@ -1,5 +1,4 @@
 
-
 import axios from 'axios';
 
 const calculateBMI = async (weight, height) => {
