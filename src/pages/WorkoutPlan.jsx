@@ -31,7 +31,7 @@ const WorkoutPlan = () => {
           console.error('Error fetching BMI:', error);
         });
     }
-  }, [weight, height]); // Depend on parsed height and weight
+  }, [weight, height]); 
 
   return (
     <div>

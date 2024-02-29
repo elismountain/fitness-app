@@ -1,11 +1,11 @@
 
 import axios from 'axios';
 
-const calculateBMI = async (weight, height) => {
+const calculateBMI = async (weight, height, bmi) => {
   const options = {
     method: 'GET',
     url: 'https://body-mass-index-bmi-calculator.p.rapidapi.com/metric',
-    params: { weight: weight, height: height},
+    params: { weight: weight, height: height, bmi: bmi},
     headers: {
       'X-RapidAPI-Key': '8d53762f7cmsh85d426eae7f5ae5p1c21c7jsnbe6b01f1cc80',
       'X-RapidAPI-Host': 'body-mass-index-bmi-calculator.p.rapidapi.com'
