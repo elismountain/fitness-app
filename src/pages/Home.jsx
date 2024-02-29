@@ -12,7 +12,7 @@ const Home = () => {
 
   return (
     <div>
-      <h1>Sign In</h1>
+      <h1>WONDER WOMAN WORKOUT</h1>
       <SignIn onSubmit={handleSubmit} />
     </div>
   );
