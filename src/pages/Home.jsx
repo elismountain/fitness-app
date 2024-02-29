@@ -1,18 +1,22 @@
-import React,{ useState} from 'react';
-import { Box } from '@mui/material';
-
-import Exercises from '../components/Exercises';
-import SearchExercises from '../components/SearchExercises';
-import HeroBanner from '../components/HeroBanner';
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import SignIn from '../components/SignIn';
+import './Home.css';
 
 const Home = () => {
-  return (
-    <Box>
-      <HeroBanner />
-      <SearchExercises />
-      <Exercises />
-    </Box>
-  )
-}
+  const navigate = useNavigate();
 
-export default Home
+  const handleSubmit = (formData) => {
+    navigate(`/workout-plan?username=${encodeURIComponent(formData.name)}`);
+  };
+
+  return (
+    <div>
+      <h1>WONDER WOMAN WORKOUT</h1>
+      <h2>Every workout is a step towards becoming Wonder Woman. </h2>
+      <SignIn onSubmit={handleSubmit} />
+    </div>
+  );
+};
+
+export default Home;
