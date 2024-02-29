@@ -101,7 +101,7 @@ const SignIn = ({ onSubmit }) => {
               <Form.Control.Feedback type="invalid">{weightError}</Form.Control.Feedback>
             </Form.Group>
             <Form.Group controlId="height">
-              <Form.Label>Height (in cm) :</Form.Label>
+              <Form.Label>Height (in metres) :</Form.Label>
               <Form.Control
                 type="number"
                 value={height}
