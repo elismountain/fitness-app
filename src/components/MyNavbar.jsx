@@ -9,21 +9,21 @@ const MyNavbar = () => {
   return (
     <Navbar bg="dark" variant="dark">
     <Container>
-      <Navbar.Brand href="#home">
+      <Navbar.Brand to="#home">
         <img
           src={Logo} 
           alt="Logo" 
           width="30" 
           height="30" 
-          className="d-inline-block align-top" Bootstrap class for alignment
+          className="d-inline-block align-top" bootstrap class for alignment
         />
         
         <b /> Fitness App
       </Navbar.Brand>
       <Nav className="me-auto">
-        <Nav.Link href="#workouts">Workouts</Nav.Link>
-        <Nav.Link href="#classes">Our Classes</Nav.Link>
-        <Nav.Link href="#contact">Contact Us</Nav.Link>
+        <Link style={{color : "white", fontSize : "15px", padding : "5px", textDecoration : "none"}} to="#workouts">Workouts</Link>
+        <Link style={{color : "white", fontSize : "15px", padding : "5px", textDecoration : "none"}}to="#classes">Our Classes</Link>
+        <Link style={{color : "white", fontSize : "15px", padding : "5px", textDecoration : "none"}}to="#contact">Contact Us</Link>
       </Nav>
     </Container>
   </Navbar>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
+import calculateBMI from './BMI.js'; 
 
 const SignIn = ({ onSubmit }) => {
   const [name, setName] = useState('');
@@ -87,7 +88,7 @@ const SignIn = ({ onSubmit }) => {
               <Form.Control.Feedback type="invalid">{ageError}</Form.Control.Feedback>
             </Form.Group>
             <Form.Group controlId="weight">
-              <Form.Label>Weight:</Form.Label>
+              <Form.Label>Weight (in Kilograms) : </Form.Label>
               <Form.Control
                 type="number"
                 value={weight}
@@ -98,7 +99,7 @@ const SignIn = ({ onSubmit }) => {
               <Form.Control.Feedback type="invalid">{weightError}</Form.Control.Feedback>
             </Form.Group>
             <Form.Group controlId="height">
-              <Form.Label>Height:</Form.Label>
+              <Form.Label>Height (in meters) :</Form.Label>
               <Form.Control
                 type="number"
                 value={height}
