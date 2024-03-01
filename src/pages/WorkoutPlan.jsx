@@ -84,14 +84,11 @@ const WorkoutPlan = () => {
         
         {goal && <p>Goal for today : {goal}</p>}
 
-        {exercise.map((exercise, index) => (
-          <div className="exercise-list">
-            <div key={index}>
+        {/* {exercise.map((exercise, index) => (
+          <div key={index}>
             {exercise.name}
             <img src={exercise.gifUrl}></img>
           </div>
-          </div>
-
         ))}
       </div>
       <ExerciseDetail goal1={goal} />
