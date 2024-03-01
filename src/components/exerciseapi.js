@@ -7,7 +7,7 @@ const ExerciseApi = async (goal) => {
     method: 'GET',
     url: 'https://exercisedb.p.rapidapi.com/exercises',
     params: {
-      limit: '10'
+      limit: '5'
     },
     headers: {
       'X-RapidAPI-Key': rapidApiKey,

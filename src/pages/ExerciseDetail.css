@@ -1,0 +1,23 @@
+.main-exercise-container {
+  width: 80dvh;
+  margin-left: 15px;
+  border: solid black;
+}
+
+.exercise-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.info {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 15px;
+  padding: 10px;
+  align-items: center;
+  text-align: justify;
+}
+
+.img {
+  height: 30dvh;
+}
