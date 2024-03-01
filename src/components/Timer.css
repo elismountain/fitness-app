@@ -10,6 +10,7 @@
     justify-content: center;
     align-items: center;
     height: 300px;
+    margin-bottom: 80px;
 }
 
 .circle {
@@ -31,7 +32,9 @@
     display: flex;
     justify-content: center;
     margin-top: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 180px;
+    
+    
 }
 
 .buttons button {
@@ -42,6 +45,9 @@
     font-size: 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    border-radius: 15px;
+    margin-left: 10px;
+    
 }
 
 .buttons button:hover {
@@ -52,16 +58,25 @@
     width: 600px;
     margin: 0 auto;
     border-collapse: collapse;
+    
 }
 
 .records table th,
 .records table td {
     padding: 8px;
-    border: 1px solid #ddd;
     text-align: center;
+    border: #b3072c solid 5px;
 }
 
 .records table th {
-    background-color: white;
+    border: #b3072c solid 5px;
     color: white;
+    font-size: 20px;
+}
+
+
+.records-timer__page {
+    margin-top: 100px;
+
+
 }

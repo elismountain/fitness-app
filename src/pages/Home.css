@@ -2,3 +2,8 @@ h1, h2 {
     text-align: center;
 }
 
+body {
+    background: rgb(72,17,108);
+    background: linear-gradient(110deg, rgb(228, 98, 24) 0%, rgb(90, 16, 71) 100%);
+
+}

@@ -1,0 +1,72 @@
+.timer-block {
+    display: grid;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: orange;
+    text-align: center;
+    grid-template-columns: repeat(2, 1fr); /* Two columns layout for desktop */
+    grid-template-rows: auto auto auto; /* Auto rows */
+    gap: 20px; /* Adjust gap between grid items */
+    grid-template-areas:
+      "description timer-wrap"
+      "demonstration timer-wrap";
+  }
+  
+  .description {
+    grid-area: description;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 300px; /* Minimum width for desktop */
+    height: auto; /* Auto height */
+    border: #b3072c solid 5px;
+    border-radius: 10px;
+    margin-left: 20px;
+  }
+  
+  .description-header {
+    margin-top: 20px;
+  }
+  
+  .description-text {
+    margin-top: 20px;
+    font-size: 16px;
+  }
+  
+  .demonstration {
+    grid-area: demonstration;
+    min-width: 300px; /* Minimum width for desktop */
+    height: auto; /* Auto height */
+    display: block;
+    border: #b3072c solid 5px;
+    border-radius: 10px;
+    margin-left: 20px;
+  }
+  
+  .demonstration-header {
+    margin-top: 20px;
+  }
+  
+  .timer-wrap {
+    grid-area: timer-wrap;
+  }
+  
+  /* Media query for mobile devices */
+  @media (max-width: 970px) {
+    .timer-block {
+      grid-template-columns: 1fr; /* Single column layout for mobile */
+      grid-template-areas:
+        "description"
+        "demonstration"
+        "timer-wrap";
+    }
+  
+    .description,
+    .demonstration {
+      min-width: 65%; 
+      margin: 10px 20px; /* Add margin on both sides */
+    }
+  }
+  
