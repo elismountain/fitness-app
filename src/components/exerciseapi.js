@@ -3,6 +3,7 @@ import axios from 'axios';
 const exerciseAPI = async (goal) => {
   let goal1= goal.toLowerCase()
   console.log(goal1)
+  let rapidApiKey = "8d53762f7cmsh85d426eae7f5ae5p1c21c7jsnbe6b01f1cc80";
   const options = {
     method: 'GET',
     url: `https://exercisedb.p.rapidapi.com/exercises/bodyPart/${goal1}`,
@@ -30,4 +31,4 @@ const exerciseAPI = async (goal) => {
   }
 };
 
-export default ExerciseApi;
+export default exerciseAPI;

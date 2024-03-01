@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import calculateBMI from '../components/BMI';
 import EmojiTracker from '../components/emoji';
-import ExerciseApi from '../components/exerciseapi';
+import exerciseAPI from '../components/exerciseapi';
+import weightCategory from '../components/weightCategory';
 import ExerciseDetail from './ExerciseDetail';
 
 const WorkoutPlan = () => {
@@ -17,30 +18,25 @@ const WorkoutPlan = () => {
 
   const [bmi, setBmi] = useState('');
   const [exercise, setExercise] = useState([])
+  const [weightC, setWeightCategory] = useState("")
 
 
   // useeffect hook to calculate bmi
   useEffect(() => {
-    console.log(weight, height)
+    console.log(weight, height);
     // Check if height and weight are valid numbers before calling calculateBMI
     if (!isNaN(height) && !isNaN(weight)) {
-      var data = await calculateBMI(weight, height);
-
-      if(!data) {
-        return;
-      }
-
-      console.log(`Data received from BMI call: ${data}`);
-
-      // Check if data and data.bmi exist before calling setBmi to avoid errors
-      if (data && data.bmi) {
-        setBmi(data.bmi);
-      } else {
-        console.error("BMI data is not available or in unexpected format.");
-      }
+      calculateBMI(weight, height)
+        .then(data => {
+          console.log(`Data received from BMI call:`, data);
+          // Assuming data is the BMI value directly; adjust according to your function's return structure
+          setBmi(data.bmi);
+        })
+        .catch(error => {
+          console.error("BMI calculation error:", error);
+        });
     }
-  }, [weight, height]); 
-
+  }, [weight, height]);
   // trial 
   useEffect(() => {
     // Check if height and weight are valid numbers before calling calculateBMI
@@ -58,6 +54,22 @@ const WorkoutPlan = () => {
     
   }, [goal]); 
 
+  // react hook to fetch weight category
+  useEffect(() => {
+    console.log(bmi);
+    // Check if height and weight are valid numbers before calling calculateBMI
+    if (bmi > 0) {
+      weightCategory(bmi)
+        .then(data => {
+          console.log(`Data received from weight category call:`, data);
+          // Assuming data is the BMI value directly; adjust according to your function's return structure
+          setWeightCategory(data.weightCategory);
+        })
+        .catch(error => {
+          console.error("Weight Category calculation error:", error);
+        });
+    }
+  }, [bmi]);
 
 
   return (
@@ -67,6 +79,7 @@ const WorkoutPlan = () => {
       
     
         {bmi && <p>Your BMI is: {bmi.toFixed(2)}</p>}
+        {weightC && <p>Your BMI cateogory is {weightC}</p>}
         {goal && <p>Goal for today : {goal}</p>}
         <p>How are you feeling today?</p>
         <div>{EmojiTracker()}</div>
