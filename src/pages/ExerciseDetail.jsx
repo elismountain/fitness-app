@@ -1,22 +1,43 @@
 import React, { useState, useEffect } from "react";
-import ExerciseApi from "../components/exerciseapi";
+import { useLocation } from "react-router-dom";
+import exerciseAPI from "../components/exerciseapi";
 import "./ExerciseDetail.css";
 
 const ExerciseDetail = () => {
   const [exercises, setExercises] = useState([]);
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const username = searchParams.get("username");
+  const goal = searchParams.get("goal");
+
 
   useEffect(() => {
-    const fetchExercises = async () => {
-      try {
-        const fetchedExercises = await ExerciseApi();
-        setExercises(fetchedExercises);
-      } catch (error) {
-        console.error("Error fetching exercises:", error);
-      }
-    };
+    // Check if height and weight are valid numbers before calling calculateBMI
 
-    fetchExercises();
-  }, []);
+    // Assuming calculateBMI expects two arguments: weight and height
+    exerciseAPI(goal)
+      .then((data) => {
+        console.log(data);
+        // Check if data and data.bmi exist before calling setBmi to avoid errors
+        setExercises(data);
+      })
+      .catch((error) => {
+        console.error("Error fetching BMI:", error);
+      });
+  }, [goal]);
+
+  // useEffect(() => {
+  //   const fetchExercises = async () => {
+  //     try {
+  //       const fetchedExercises = await exerciseAPI();
+  //       setExercises(fetchedExercises);
+  //     } catch (error) {
+  //       console.error("Error fetching exercises:", error);
+  //     }
+  //   };
+
+  //   fetchExercises();
+  // }, []);
 
   return (
     <div className="main-exercise-container">
