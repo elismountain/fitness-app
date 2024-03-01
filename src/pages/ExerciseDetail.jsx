@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import ExerciseApi from '../components/exerciseapi';
+import React, { useState, useEffect } from "react";
+import ExerciseApi from "../components/exerciseapi";
+import "./ExerciseDetail.css";
 
 const ExerciseDetail = () => {
   const [exercises, setExercises] = useState([]);
@@ -18,13 +19,19 @@ const ExerciseDetail = () => {
   }, []);
 
   return (
-    <div>
+    <div className="main-exercise-container">
+      <h1>Your workouts</h1>
       {exercises.map((exercise, index) => (
-        <div key={index}>
-          <h2>{exercise.name}</h2>
-          <p>Instructions: {exercise.instructions}</p>
-          <img src={exercise.gifUrl} alt="Exercise" />
-        </div>
+          <div className="exercise-container" key={index}>
+            <h2 className="name">{exercise.name}</h2>
+            <div className="info">
+              <p className="instructions">
+                Instructions: {exercise.instructions}
+              </p>
+              <img className="img" src={exercise.gifUrl} alt="Exercise" />
+            </div>
+          </div>
+        
       ))}
     </div>
   );

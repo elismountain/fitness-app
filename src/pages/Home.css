@@ -1,9 +1,14 @@
 h1, h2 {
     text-align: center;
+    padding: 20px;
+    color: aliceblue;
 }
 
-body {
+/* body {
     background: rgb(72,17,108);
-    background: linear-gradient(110deg, rgb(228, 98, 24) 0%, rgb(90, 16, 71) 100%);
+    background: linear-gradient(110deg, rgb(243, 131, 67) 0%, rgb(67, 6, 52) 100%);
+} */
 
+body {
+    background: linear-gradient(110deg, rgb(243, 131, 67) 0%, rgb(152, 16, 118) 50%, rgb(72, 17, 108) 100%);
 }

@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import calculateBMI from '../components/BMI';
 import EmojiTracker from '../components/emoji';
-import ExerciseApi from '../components/exerciseapi';
+import exerciseAPI from '../components/exerciseapi';
+import weightCategory from '../components/weightCategory';
 import ExerciseDetail from './ExerciseDetail';
 
 const WorkoutPlan = () => {
@@ -16,58 +17,82 @@ const WorkoutPlan = () => {
   const weight = parseFloat(searchParams.get('weight'));
 
   const [bmi, setBmi] = useState('');
+  const [exercise, setExercise] = useState([])
+  const [weightC, setWeightCategory] = useState("")
+
 
   // useeffect hook to calculate bmi
-  useEffect(async () => {
+  useEffect(() => {
+    console.log(weight, height);
     // Check if height and weight are valid numbers before calling calculateBMI
     if (!isNaN(height) && !isNaN(weight)) {
-      var data = await calculateBMI(weight, height);
-
-      if(!data) {
-        return;
-      }
-
-      console.log(`Data received from BMI call: ${data}`);
-
-      // Check if data and data.bmi exist before calling setBmi to avoid errors
-      if (data && data.bmi) {
-        setBmi(data.bmi);
-      } else {
-        console.error("BMI data is not available or in unexpected format.");
-      }
+      calculateBMI(weight, height)
+        .then(data => {
+          console.log(`Data received from BMI call:`, data);
+          // Assuming data is the BMI value directly; adjust according to your function's return structure
+          setBmi(data.bmi);
+        })
+        .catch(error => {
+          console.error("BMI calculation error:", error);
+        });
     }
-  }, [weight, height]); 
+  }, [weight, height]);
+  // trial 
+  useEffect(() => {
+    // Check if height and weight are valid numbers before calling calculateBMI
+    
+      // Assuming calculateBMI expects two arguments: weight and height
+      exerciseAPI(goal)
+        .then(data => {
+          console.log(data);
+          // Check if data and data.bmi exist before calling setBmi to avoid errors
+          setExercise(data)
+        })
+        .catch(error => {
+          console.error('Error fetching BMI:', error);
+        });
+    
+  }, [goal]); 
 
- // get the goal data from the signin form
- useEffect(async () => {
-  const fetchedExercises = await ExerciseApi();
-
-  if (!fetchedExercises) {
-    console.error("Error getting exercise data");
-    return;
-  }
-
-  if (fetchedExercises.length == 0) {
-    console.log("Exercise data not available");
-  }
-
-  // TODO: setExcercises not defined
-  // setExercises(fetchedExercises);
-}, [goal]);
-
+  // react hook to fetch weight category
+  useEffect(() => {
+    console.log(bmi);
+    // Check if height and weight are valid numbers before calling calculateBMI
+    if (bmi > 0) {
+      weightCategory(bmi)
+        .then(data => {
+          console.log(`Data received from weight category call:`, data);
+          // Assuming data is the BMI value directly; adjust according to your function's return structure
+          setWeightCategory(data.weightCategory);
+        })
+        .catch(error => {
+          console.error("Weight Category calculation error:", error);
+        });
+    }
+  }, [bmi]);
 
 
   return (
-    <div>
-      <h2>Welcome , {username}</h2>
-    
-      <div>
-        {bmi && <p>Your BMI is: {bmi.toFixed(2)}</p>}
-        {goal && <p>Goal for today : {goal}</p>}
-        <p>How are you feeling today?</p>
+    <div className='container-fluid'>
+      <h2 style= {{alignItems: "left"}}>Welcome , {username}</h2>
+       <p>How are you feeling today?</p>
         <div>{EmojiTracker()}</div>
+        <div>
+      
+        
+        {bmi && <p>Your BMI is: {bmi.toFixed(2)}</p>}
+        {weightC && <p>Your BMI is within the {weightC} category</p>}
+        {goal && <p>Goal for today : {goal}</p>}
+        
+        {exercise.map((exercise, index) => (
+          <div key={index}>
+            
+            {exercise.name}
+            <img src={exercise.gifUrl}></img>
+          </div>
+        ))}
       </div>
-      <ExerciseDetail />
+      
     </div>
   );
 };
