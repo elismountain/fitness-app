@@ -2,13 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import calculateBMI from '../components/BMI';
 import EmojiTracker from '../components/emoji';
-import exerciseAPI from '../components/exerciseapi';
+import ExerciseApi from '../components/exerciseapi';
+import ExerciseDetail from './ExerciseDetail';
 
 const WorkoutPlan = () => {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const username = searchParams.get('username');
-  const goal =searchParams.get('goal')
+  const goal = searchParams.get('goal')
   
   // Directly parse to float here to avoid re-declaring inside useEffect
   const height = parseFloat(searchParams.get('height'));
@@ -23,20 +24,20 @@ const WorkoutPlan = () => {
     console.log(weight, height)
     // Check if height and weight are valid numbers before calling calculateBMI
     if (!isNaN(height) && !isNaN(weight)) {
-      // Assuming calculateBMI expects two arguments: weight and height
-      calculateBMI(weight, height)
-        .then(data => {
-          console.log(data);
-          // Check if data and data.bmi exist before calling setBmi to avoid errors
-          if (data && data.bmi) {
-            setBmi(data.bmi);
-          } else {
-            console.error("BMI data is not available or in unexpected format.");
-          }
-        })
-        .catch(error => {
-          console.error('Error fetching BMI:', error);
-        });
+      var data = await calculateBMI(weight, height);
+
+      if(!data) {
+        return;
+      }
+
+      console.log(`Data received from BMI call: ${data}`);
+
+      // Check if data and data.bmi exist before calling setBmi to avoid errors
+      if (data && data.bmi) {
+        setBmi(data.bmi);
+      } else {
+        console.error("BMI data is not available or in unexpected format.");
+      }
     }
   }, [weight, height]); 
 

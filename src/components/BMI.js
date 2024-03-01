@@ -12,12 +12,19 @@ const calculateBMI = async (weight, height) => {
     }
   };
 
+  console.log(`Calculating BMI for weight:${weight}, height:${height} and bmi:${bmi}`)
+
   try {
     const response = await axios.request(options);
-    console.log(response.data);
+    console.log(`BMI API call response`, response);
     return response.data;
   } catch (error) {
-    console.error('Error calling the BMI API:', error);
+    console.error(`Error calling the BMI API: ${error}`);
+
+    if (error.response.status == 429) {
+      alert(`Message from BMI API call: ${error.response.data.message || error.response.data || error.response}`);
+    }
+
     return null;
   }
 };

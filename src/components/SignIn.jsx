@@ -109,7 +109,8 @@ const SignIn = ({ onSubmit }) => {
                 onChange={(e) => setHeight(e.target.value)}
                 placeholder="Enter your height"
                 isInvalid={!!heightError}
-                // min="10"
+                min="1.1"
+                max="2.3"
               />
               <Form.Control.Feedback type="invalid">{heightError}</Form.Control.Feedback>
             </Form.Group>
