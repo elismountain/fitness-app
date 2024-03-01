@@ -27,7 +27,7 @@ const WorkoutPlan = () => {
         return;
       }
 
-      onsole.log(`Data received from BMI call: ${data}`);
+      console.log(`Data received from BMI call: ${data}`);
 
       // Check if data and data.bmi exist before calling setBmi to avoid errors
       if (data && data.bmi) {
