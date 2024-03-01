@@ -96,7 +96,7 @@ const SignIn = ({ onSubmit }) => {
                 onChange={(e) => setWeight(e.target.value)}
                 placeholder="Enter your weight"
                 isInvalid={!!weightError}
-                min="10"
+                // min="10"
               />
               <Form.Control.Feedback type="invalid">{weightError}</Form.Control.Feedback>
             </Form.Group>
@@ -117,21 +117,21 @@ const SignIn = ({ onSubmit }) => {
               <Form.Label>Goal:</Form.Label>
               <Form.Control
                 as="select"
-                value={goal}
+                name={goal}
                 onChange={(e) => setGoal(e.target.value)}
                 isInvalid={!!goalError}
               >
                 <option value="">Select goal</option>
-                <option value="back">Back</option>
-                <option value="cardio">Cardio</option>
-                <option value="chest">Chest</option>
-                <option value="lower%20arms">Lower Arms</option>
-                <option value="lower%20legs">Lower Legs</option>
-                <option value="neck">Neck</option>
-                <option value="shoulders">Shoulders</option>
-                <option value="upper%20arms">Upper Arms</option>
-                <option value="upperr%20arms">Upper Arms</option>
-                <option value="waist">Waist</option>
+                <option  value="Back">Back</option>
+                <option  value="Cardio">Cardio</option>
+                <option  value="Chest">Chest</option>
+                <option   value="Lower arms">Lower Arms</option>
+                <option  value="Lower legs">Lower Legs</option>
+                <option  value="Neck">Neck</option>
+                <option  value="Shoulders">Shoulders</option>
+                <option  value="Upper legs">Upper Legs</option>
+                <option  value="Upper arms">Upper Arms</option>
+                <option  value="Waist">Waist</option>
                 
               </Form.Control>
               <Form.Control.Feedback type="invalid">{goalError}</Form.Control.Feedback>
