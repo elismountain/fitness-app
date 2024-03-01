@@ -4,10 +4,19 @@
   border: solid black;
 }
 
-.exercise-container {
+/* .exercise-container {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+} */
+
+
+.exercise-item {
+  display: flex;
+  flex-wrap: wrap;
 }
+
+
 
 .info {
   display: flex;

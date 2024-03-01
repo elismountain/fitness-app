@@ -1,0 +1,15 @@
+.exercise-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Равномерно распределить элементы по контейнеру */
+  }
+  
+  .exercise-list > div {
+    width: calc(50% - 20px); /* 50% ширины родительского контейнера минус отступы */
+    margin-bottom: 20px; /* Отступ между строками */
+  }
+  
+  .exercise-list > div img {
+    max-width: 100%;
+    height: auto;
+  }

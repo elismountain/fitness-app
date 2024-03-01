@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from "react";
-import ExerciseApi from "../components/exerciseapi";
+// import ExerciseApi from "../components/exerciseapi";
+import exerciseAPI from "../components/exerciseapi";
 import "./ExerciseDetail.css";
 
-const ExerciseDetail = () => {
+const ExerciseDetail = (goal1) => {
   const [exercises, setExercises] = useState([]);
 
   useEffect(() => {
     const fetchExercises = async () => {
       try {
-        const fetchedExercises = await ExerciseApi();
+        const fetchedExercises = await exerciseAPI({goal1});
         setExercises(fetchedExercises);
       } catch (error) {
         console.error("Error fetching exercises:", error);
@@ -23,6 +24,7 @@ const ExerciseDetail = () => {
       <h1>Your workouts</h1>
       {exercises.map((exercise, index) => (
           <div className="exercise-container" key={index}>
+            <div className="exercise-item">
             <h2 className="name">{exercise.name}</h2>
             <div className="info">
               <p className="instructions">
@@ -30,8 +32,7 @@ const ExerciseDetail = () => {
               </p>
               <img className="img" src={exercise.gifUrl} alt="Exercise" />
             </div>
-          </div>
-        
+          </div> </div>
       ))}
     </div>
   );

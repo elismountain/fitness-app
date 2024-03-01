@@ -5,6 +5,9 @@ import EmojiTracker from "../components/emoji";
 import exerciseAPI from "../components/exerciseapi";
 import weightCategory from "../components/weightCategory";
 import ExerciseDetail from "./ExerciseDetail";
+import "./WorkoutPlan.css";
+
+
 
 const WorkoutPlan = () => {
   const location = useLocation();
@@ -70,23 +73,28 @@ const WorkoutPlan = () => {
   }, [bmi]);
 
   return (
-    <div className="container-fluid bmi-box">
+    <div className="container-fluid">
       <h2 style={{ alignItems: "left" }}>Welcome , {username}</h2>
       <p>How are you feeling today?</p>
       <div>{EmojiTracker()}</div>
       <div>
         {bmi && <p>Your BMI is: {bmi.toFixed(2)}</p>}
         {weightC && <p>Your BMI is within the {weightC} category</p>}
+
+        
         {goal && <p>Goal for today : {goal}</p>}
 
         {exercise.map((exercise, index) => (
-          <div key={index}>
+          <div className="exercise-list">
+            <div key={index}>
             {exercise.name}
             <img src={exercise.gifUrl}></img>
           </div>
+          </div>
+
         ))}
       </div>
-      <ExerciseDetail />
+      <ExerciseDetail goal1={goal} />
     </div>
   );
 };
