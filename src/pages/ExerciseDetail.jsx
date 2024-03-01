@@ -1,14 +1,22 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from "react-router-dom";
-import { exerciseAPI } from '../components/exerciseapi';
-import SignIn from '../components/SignIn';
-import { exercisesArray } from `../components/exerciseapi`;
-
+import ExerciseApi from '../components/exerciseapi';
 
 const ExerciseDetail = () => {
   const [exercises, setExercises] = useState([]);
-  setExercises(exerciseApi);
-  
+
+  useEffect(() => {
+    const fetchExercises = async () => {
+      try {
+        const fetchedExercises = await ExerciseApi();
+        setExercises(fetchedExercises);
+      } catch (error) {
+        console.error("Error fetching exercises:", error);
+      }
+    };
+
+    fetchExercises();
+  }, []);
+
   return (
     <div>
       {exercises.map((exercise, index) => (
