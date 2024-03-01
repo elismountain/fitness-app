@@ -79,12 +79,12 @@ const WorkoutPlan = () => {
         {weightC && <p>Your BMI is within the {weightC} category</p>}
         {goal && <p>Goal for today : {goal}</p>}
 
-        {exercise.map((exercise, index) => (
+        {/* {exercise.map((exercise, index) => (
           <div key={index}>
             {exercise.name}
             <img src={exercise.gifUrl}></img>
           </div>
-        ))}
+        ))} */}
       </div>
       <ExerciseDetail />
     </div>
