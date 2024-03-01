@@ -7,7 +7,7 @@ import { exercisesArray } from `../components/exerciseapi`;
 
 const ExerciseDetail = () => {
   const [exercises, setExercises] = useState([]);
-  setExercises(exerciseApi);
+  setExercises(exerciseAPI);
   
   return (
     <div>

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import ExerciseDetail from '../pages/ExerciseDetail';
+// import ExerciseDetail from '../pages/ExerciseDetail';
 
 const ExerciseApi = async(goal) => {
 const options = {
