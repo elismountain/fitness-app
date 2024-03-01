@@ -106,6 +106,14 @@ body {
     text-decoration: none;
   }
 
+  h2 {
+    /* position: relative; */
+ margin : 0;
+ padding : 0;
+ /* position : "fixed"; */
+ top : 0;
+  }
+
   @media screen and (max-width:1200px) {
     .detail-image {
       width: 300px;
