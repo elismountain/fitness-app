@@ -66,7 +66,7 @@ const SignIn = ({ onSubmit }) => {
         <Col>
           <Form onSubmit={handleSubmit} style={{ minWidth: '700px' }}>
             <Form.Group controlId="name">
-              <Form.Label>Name:</Form.Label>
+              <Form.Label style={{ color:  'white'}}>Name:</Form.Label>
               <Form.Control
                 type="text"
                 value={name}
@@ -77,7 +77,7 @@ const SignIn = ({ onSubmit }) => {
               <Form.Control.Feedback type="invalid">{nameError}</Form.Control.Feedback>
             </Form.Group>
             <Form.Group controlId="age">
-              <Form.Label>Age:</Form.Label>
+              <Form.Label style={{ color:  'white'}}>Age:</Form.Label>
               <Form.Control
                 type="number"
                 value={age}
@@ -89,7 +89,7 @@ const SignIn = ({ onSubmit }) => {
               <Form.Control.Feedback type="invalid">{ageError}</Form.Control.Feedback>
             </Form.Group>
             <Form.Group controlId="weight">
-              <Form.Label>Weight (in kg) : </Form.Label>
+              <Form.Label style={{ color:  'white'}}>Weight (in kg) : </Form.Label>
               <Form.Control
                 type="number"
                 value={weight}
@@ -101,7 +101,7 @@ const SignIn = ({ onSubmit }) => {
               <Form.Control.Feedback type="invalid">{weightError}</Form.Control.Feedback>
             </Form.Group>
             <Form.Group controlId="height">
-              <Form.Label>Height (in meter) :</Form.Label>
+              <Form.Label style={{ color:  'white'}}>Height (in meter) :</Form.Label>
               <Form.Control
                 type="number"
                 step="0.01"
@@ -115,7 +115,7 @@ const SignIn = ({ onSubmit }) => {
               <Form.Control.Feedback type="invalid">{heightError}</Form.Control.Feedback>
             </Form.Group>
             <Form.Group controlId="goal">
-              <Form.Label>Goal:</Form.Label>
+              <Form.Label style={{ color:  'white'}}>Goal:</Form.Label>
               <Form.Control
                 as="select"
                 value={goal}
@@ -123,18 +123,37 @@ const SignIn = ({ onSubmit }) => {
                 isInvalid={!!goalError}
               >
                 <option value="">Select goal</option>
-                <option value="Upper Body">Upper Body</option>
-                <option value="Lower Body">Lower Body</option>
-                <option value="ABS">ABS</option>
-                <option value="Cardio">Cardio</option>
-                <option value="HIIT">HIIT</option>
+                <option value="back">Back</option>
+                <option value="cardio">Cardio</option>
+                <option value="chest">Chest</option>
+                <option value="lower-arms">Lower Arms</option>
+                <option value="lower-legs">Lower Legs</option>
+                <option value="neck">Neck</option>
+                <option value="shoulder">Shoulder</option>
+                <option value="upper-arms">Upper Arms</option>
+                <option value="upper-legs">Upper Legs</option>
+                <option value="waist">Waist</option>
               </Form.Control>
               <Form.Control.Feedback type="invalid">{goalError}</Form.Control.Feedback>
             </Form.Group>
             <br />
-            <Button variant="primary" size="lg" type="submit">
-              I am ready!
-            </Button>
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+  <Button
+    style={{
+      backgroundColor: 'orange',
+      borderRadius: '10px',
+      fontSize: '1.5rem',
+      padding: '10px 20px',
+      fontWeight: 'bold',
+    }}
+    size="lg"
+    type="submit"
+  >
+    I am ready!
+  </Button>
+</div>
+
+
           </Form>
         </Col>
       </Row>
