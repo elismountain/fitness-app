@@ -1,31 +1,31 @@
 .main-exercise-container {
-  width: 80dvh;
-  margin-left: 15px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
   border: solid black;
 }
 
 /* .exercise-container {
   display: flex;
+  width: 20dvw;
   flex-direction: column;
-  flex-wrap: wrap;
-} */
-
-
-.exercise-item {
-  display: flex;
-  flex-wrap: wrap;
 }
 
-
-
-.info {
+h4 {
+  text-align: center;
+  color: white;
+}
+/* .info {
   display: flex;
   flex-direction: row-reverse;
   gap: 15px;
   padding: 10px;
   align-items: center;
   text-align: justify;
-}
+} */
 
 .img {
   height: 30dvh;

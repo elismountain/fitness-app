@@ -41,18 +41,17 @@ const ExerciseDetail = (goal1) => {
 
   return (
     <div className="main-exercise-container">
-      <h1>Your workouts</h1>
       {exercises.map((exercise, index) => (
           <div className="exercise-container" key={index}>
-            <div className="exercise-item">
-            <h2 className="name">{exercise.name}</h2>
-            <div className="info">
-              <p className="instructions">
+            <h4 className="name">{exercise.name}</h4>
+            {/* <div className="info"> */}
+              {/* <p className="instructions">
                 Instructions: {exercise.instructions}
-              </p>
+              </p> */}
               <img className="img" src={exercise.gifUrl} alt="Exercise" />
-            </div>
-          </div> </div>
+            {/* </div> */}
+          </div>
+        
       ))}
     </div>
   );

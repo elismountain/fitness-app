@@ -91,7 +91,8 @@ const WorkoutPlan = () => {
           </div>
         ))} */}
       </div>
-      <ExerciseDetail goal1={goal} />
+      <h1>Your workouts</h1>
+      <ExerciseDetail />
     </div>
   );
 };
