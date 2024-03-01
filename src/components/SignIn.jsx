@@ -124,16 +124,16 @@ const SignIn = ({ onSubmit }) => {
                 isInvalid={!!goalError}
               >
                 <option value="">Select goal</option>
-                <option value="back">Back</option>
-                <option value="cardio">Cardio</option>
-                <option value="chest">Chest</option>
-                <option value="lower-arms">Lower Arms</option>
-                <option value="lower-legs">Lower Legs</option>
-                <option value="neck">Neck</option>
-                <option value="shoulder">Shoulder</option>
-                <option value="upper-arms">Upper Arms</option>
-                <option value="upper-legs">Upper Legs</option>
-                <option value="waist">Waist</option>
+                <option value="Back">Back</option>
+                <option value="Cardio">Cardio</option>
+                <option value="Chest">Chest</option>
+                <option value="Lower arms">Lower Arms</option>
+                <option value="Lower legs">Lower Legs</option>
+                <option value="Neck">Neck</option>
+                <option value="Shoulder">Shoulder</option>
+                <option value="Upper arms">Upper Arms</option>
+                <option value="Upper legs">Upper Legs</option>
+                <option value="Waist">Waist</option>
               </Form.Control>
               <Form.Control.Feedback type="invalid">{goalError}</Form.Control.Feedback>
             </Form.Group>
