@@ -7,7 +7,8 @@ import ExerciseDetail from './pages/ExerciseDetail';
 import Home from './pages/Home';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import Contact from './pages/contact'; 
+import Contact from './pages/contact';
+import WaterTracker from './components/WaterTracker'; // Import WaterTracker component
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/exercise/:id" element={<ExerciseDetail />} />
         <Route path="/contact" element={<Contact />} /> {/* This line adds the Contact route */}
+        <Route path="/water-tracker" element={<WaterTracker />} /> {/* New route for WaterTracker */}
       </Routes>
       <Footer />
     </Box>
