@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Navbar, Container, Nav } from 'react-bootstrap';
 
 import Logo from '../assets/images/Logo.png';
+import '../styles/Navbar.css';
 
 const MyNavbar = () => {
   return (
@@ -12,8 +13,8 @@ const MyNavbar = () => {
         <img
           src={Logo} 
           alt="Logo" 
-          width="30" 
-          height="30" 
+          width="120" 
+          height="120" 
           className="d-inline-block align-top" bootstrap class for alignment
         />
         
