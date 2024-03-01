@@ -73,7 +73,7 @@ const WorkoutPlan = () => {
 
 
   return (
-    <div className='container-fluid'>
+    <div className='container-fluid bmi-box'>
       <h2 style= {{alignItems: "left"}}>Welcome , {username}</h2>
        <p>How are you feeling today?</p>
         <div>{EmojiTracker()}</div>
