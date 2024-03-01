@@ -1,5 +1,4 @@
 import React from 'react'
-import { Stack } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { Navbar, Container, Nav } from 'react-bootstrap';
 
@@ -7,7 +6,7 @@ import Logo from '../assets/images/Logo.png';
 
 const MyNavbar = () => {
   return (
-    <Navbar bg="dark" variant="dark">
+    <Navbar bg="transparent" variant="dark">
     <Container>
       <Navbar.Brand to="#home">
         <img
