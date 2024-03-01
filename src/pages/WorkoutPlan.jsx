@@ -75,15 +75,15 @@ const WorkoutPlan = () => {
   return (
     <div className='container-fluid'>
       <h2 style= {{alignItems: "left"}}>Welcome , {username}</h2>
-    
-      
-    
-        {bmi && <p>Your BMI is: {bmi.toFixed(2)}</p>}
-        {weightC && <p>Your BMI cateogory is {weightC}</p>}
-        {goal && <p>Goal for today : {goal}</p>}
-        <p>How are you feeling today?</p>
+       <p>How are you feeling today?</p>
         <div>{EmojiTracker()}</div>
         <div>
+      
+        
+        {bmi && <p>Your BMI is: {bmi.toFixed(2)}</p>}
+        {weightC && <p>Your BMI is within the {weightC} category</p>}
+        {goal && <p>Goal for today : {goal}</p>}
+        
         {exercise.map((exercise, index) => (
           <div key={index}>
             

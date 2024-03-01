@@ -96,22 +96,23 @@ const SignIn = ({ onSubmit }) => {
                 onChange={(e) => setWeight(e.target.value)}
                 placeholder="Enter your weight"
                 isInvalid={!!weightError}
-                // min="10"
+                min="10"
               />
               <Form.Control.Feedback type="invalid">{weightError}</Form.Control.Feedback>
             </Form.Group>
             <Form.Group controlId="height">
-              <Form.Label>Height (in meter) :</Form.Label>
+              <Form.Label>Height (in metre) :</Form.Label>
               <Form.Control
                 type="number"
-                // step="0.01"
+                step="0.01"
                 value={height}
                 onChange={(e) => setHeight(e.target.value)}
-                placeholder="Enter your height"
+                placeholder="Enter your height in metres. Eg 1.75"
                 isInvalid={!!heightError}
-                min="1.1"
-                max="2.3"
+                // min="1.10"
+                // max="2.30"
               />
+                 
               <Form.Control.Feedback type="invalid">{heightError}</Form.Control.Feedback>
             </Form.Group>
             <Form.Group controlId="goal">
