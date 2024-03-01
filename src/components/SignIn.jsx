@@ -107,32 +107,33 @@ const SignIn = ({ onSubmit }) => {
                 step="0.01"
                 value={height}
                 onChange={(e) => setHeight(e.target.value)}
-                placeholder="Enter your height"
+                placeholder="Enter your height in metres. Eg 1.75"
                 isInvalid={!!heightError}
-                min="1.1"
-                max="2.3"
+                // min="1.10"
+                // max="2.30"
               />
+                 
               <Form.Control.Feedback type="invalid">{heightError}</Form.Control.Feedback>
             </Form.Group>
             <Form.Group controlId="goal">
               <Form.Label style={{ color:  'white'}}>Goal:</Form.Label>
               <Form.Control
                 as="select"
-                value={goal}
+                name={goal}
                 onChange={(e) => setGoal(e.target.value)}
                 isInvalid={!!goalError}
               >
                 <option value="">Select goal</option>
-                <option value="back">Back</option>
-                <option value="cardio">Cardio</option>
-                <option value="chest">Chest</option>
-                <option value="lower-arms">Lower Arms</option>
-                <option value="lower-legs">Lower Legs</option>
-                <option value="neck">Neck</option>
-                <option value="shoulder">Shoulder</option>
-                <option value="upper-arms">Upper Arms</option>
-                <option value="upper-legs">Upper Legs</option>
-                <option value="waist">Waist</option>
+                <option value="Back">Back</option>
+                <option value="Cardio">Cardio</option>
+                <option value="Chest">Chest</option>
+                <option value="Lower arms">Lower Arms</option>
+                <option value="Lower legs">Lower Legs</option>
+                <option value="Neck">Neck</option>
+                <option value="Shoulder">Shoulder</option>
+                <option value="Upper arms">Upper Arms</option>
+                <option value="Upper legs">Upper Legs</option>
+                <option value="Waist">Waist</option>
               </Form.Control>
               <Form.Control.Feedback type="invalid">{goalError}</Form.Control.Feedback>
             </Form.Group>
