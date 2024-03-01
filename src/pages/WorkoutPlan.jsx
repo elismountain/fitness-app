@@ -86,6 +86,7 @@ const WorkoutPlan = () => {
           </div>
         ))} */}
       </div>
+      <h1>Your workouts</h1>
       <ExerciseDetail />
     </div>
   );
