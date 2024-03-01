@@ -20,6 +20,7 @@ const WorkoutPlan = () => {
 
   // useeffect hook to calculate bmi
   useEffect(() => {
+    console.log(weight, height)
     // Check if height and weight are valid numbers before calling calculateBMI
     if (!isNaN(height) && !isNaN(weight)) {
       // Assuming calculateBMI expects two arguments: weight and height
