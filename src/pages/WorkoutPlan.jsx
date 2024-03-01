@@ -89,7 +89,7 @@ const WorkoutPlan = () => {
             {exercise.name}
             <img src={exercise.gifUrl}></img>
           </div>
-        ))}
+        ))} */}
       </div>
       <ExerciseDetail goal1={goal} />
     </div>
