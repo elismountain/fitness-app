@@ -76,7 +76,7 @@ const SignIn = ({ onSubmit }) => {
               />
               <Form.Control.Feedback style={{color: 'white',fontSize : "20px",padding : "10px", fontWeight: 'bold'}} type="invalid">{nameError}</Form.Control.Feedback>
             </Form.Group>
-            {/* <Form.Group controlId="age">
+            <Form.Group controlId="age">
               <Form.Label style={{ color:  'white'}}>Age:</Form.Label>
               <Form.Control
                 type="number"
@@ -87,7 +87,7 @@ const SignIn = ({ onSubmit }) => {
                 min="10"
               />
               <Form.Control.Feedback style={{color: 'white', fontSize : "20px",padding : "10px", fontWeight: 'bold'}} type="invalid">{ageError}</Form.Control.Feedback>
-            </Form.Group> */}
+            </Form.Group>
             <Form.Group controlId="weight">
               <Form.Label style={{ color:  'white'}}>Weight (in kg) : </Form.Label>
               <Form.Control
