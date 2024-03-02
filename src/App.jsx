@@ -6,7 +6,7 @@ import ExerciseDetail from './pages/ExerciseDetail';
 import Home from './pages/Home';
 import MyNavbar from './components/MyNavbar';
 import Footer from './components/Footer';
-import WaterTracker from './components/WaterTracker'; // Import WaterTracker component
+import WaterTracker from './components/watertracker'; // Import WaterTracker component
 import Contact from './pages/contact';
 import WorkoutPlan from './pages/WorkoutPlan';
 import TimerPage from './pages/TimerPage';
