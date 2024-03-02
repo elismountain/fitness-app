@@ -26,14 +26,19 @@
   .bmi-container {
     display: grid; 
     grid-template-columns: 1fr 1fr; 
-    grid-template-rows: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr ; 
     gap: 0px 0px; 
     grid-template-areas: 
       "bmi-name bmi-name"
-      "bmi-result emoji-wrapper"; 
+      "bmi-result emoji-wrapper"
+      "main-exercise-container main-exercise-container";
       padding: 20px;
       color: aliceblue;
 
+  }
+
+  .main-exercise-container {
+    grid-area: main-exercise-container;
   }
 
   .bmi-name { 
@@ -69,7 +74,8 @@
       grid-template-areas:
         "bmi-name"
         "bmi-result"
-        "emoji-wrapper";
+        "emoji-wrapper"
+        "main-exercise-container";
     }
   }
  
