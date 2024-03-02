@@ -5,28 +5,40 @@
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
-  border: solid black;
+  border-radius: 15px;
+  background: white;
 }
 
-.exercise-container {
-  display: flex;
-  width: 20dvw;
-  flex-direction: column;
-}
-
-h4 {
+.exercise-name{
+  font-size: 24px;
+  font-weight: bold;
   text-align: center;
-  color: white;
 }
-/* .info {
-  display: flex;
-  flex-direction: row-reverse;
-  gap: 15px;
-  padding: 10px;
-  align-items: center;
-  text-align: justify;
-} */
 
-.img {
+.exercise-img {
   height: 30dvh;
+  padding: 20px 20px;
+  margin: 20px 20px;
+}
+
+.timer-page__button {
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 15px;
+  margin-left: 10px;
+}
+
+.timer-page__button:hover {
+  background-color: #b3072c;
+}
+
+.timer-button_container {
+  display: flex;
+  justify-content: center;
 }

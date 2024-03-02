@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import exerciseAPI from "../components/exerciseapi";
 import "./ExerciseDetail.css";
+import { Link } from 'react-router-dom';
 
-const ExerciseDetail = () => {
+const ExerciseDetail = (goal1) => {
   const [exercises, setExercises] = useState([]);
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
@@ -43,15 +44,21 @@ const ExerciseDetail = () => {
     <div className="main-exercise-container">
       {exercises.map((exercise, index) => (
           <div className="exercise-container" key={index}>
-            <h4 className="name">{exercise.name}</h4>
+            
             {/* <div className="info"> */}
               {/* <p className="instructions">
                 Instructions: {exercise.instructions}
               </p> */}
-              <img className="img" src={exercise.gifUrl} alt="Exercise" />
+              <img className="exercise-img" src={exercise.gifUrl} alt="Exercise" />
             {/* </div> */}
+            <h4 className="exercise-name">{exercise.name}</h4>
+            <div className="timer-button_container">
+            <Link to="/timer-page">
+              <button className="timer-page__button">GO</button>
+            </Link>
+            </div>
+
           </div>
-        
       ))}
     </div>
   );

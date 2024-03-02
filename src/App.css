@@ -1,6 +1,10 @@
 body {
     font-family: 'Josefin Sans';
     background-color: #FFFAFB;
+    background: linear-gradient(110deg, rgb(243, 131, 67) 0%, rgb(152, 16, 118) 50%, rgb(72, 17, 108) 100%);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+
   }
 
   * {
