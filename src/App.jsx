@@ -5,6 +5,7 @@ import ExerciseDetail from './pages/ExerciseDetail';
 import Home from './pages/Home';
 import MyNavbar from './components/MyNavbar';
 import Footer from './components/Footer';
+import ProgressTracker from './pages/progresstracker';
 import WaterTracker from './components/watertracker'; // Import WaterTracker component
 import Contact from './pages/contact';
 import WorkoutPlan from './pages/WorkoutPlan';
@@ -24,8 +25,10 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/exercise/:id" element={<ExerciseDetail />} />
-           <Route path="/workout-plan" element={<WorkoutPlan />} />
+           <Route path="/WorkoutPlan" element={<WorkoutPlan />} />
           <Route path="/timer-page" element={<TimerPage />} />
+          <Route path="/ExerciseDetail" element={<ExerciseDetail />} />
+          <Route path="/progresstracker" element={<ProgressTracker />} />
         <Route path="/contact" element={<Contact />} /> {/* This line adds the Contact route */}
         <Route path="/water-tracker" element={<WaterTracker />} /> {/* New route for WaterTracker */}
        <Route path="*" element={<Home />} />   
