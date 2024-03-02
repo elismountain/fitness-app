@@ -1,15 +1,75 @@
 .exercise-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; /* Равномерно распределить элементы по контейнеру */
+    justify-content: space-between; 
   }
   
   .exercise-list > div {
-    width: calc(50% - 20px); /* 50% ширины родительского контейнера минус отступы */
-    margin-bottom: 20px; /* Отступ между строками */
+    width: calc(50% - 20px); 
+    margin-bottom: 20px; 
   }
   
   .exercise-list > div img {
     max-width: 100%;
     height: auto;
   }
+
+  .workouts-title {
+    text-align: center;
+    padding: 20px;
+    color: aliceblue;
+    margin-bottom: 50px;
+
+  }
+
+
+  .bmi-container {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "bmi-name bmi-name"
+      "bmi-result emoji-wrapper"; 
+      padding: 20px;
+      color: aliceblue;
+
+  }
+
+  .bmi-name { 
+    grid-area: bmi-name;
+    text-align: center;
+    text-transform: uppercase;
+ }
+
+  .bmi-result { 
+    padding-left: 120px;
+    grid-area: bmi-result; 
+    font-size: 25px;
+    
+
+}
+
+
+  .emoji-wrapper { 
+    padding-left: 120px;
+    grid-area: emoji-wrapper;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+.emojiTracker {
+    font-size: 45px;
+}
+
+
+@media (max-width: 970px) {
+    .bmi-container {
+      grid-template-columns: 1fr; /* Single column layout for mobile */
+      grid-template-areas:
+        "bmi-name"
+        "bmi-result"
+        "emoji-wrapper";
+    }
+  }
+ 

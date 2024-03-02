@@ -4,7 +4,7 @@ import '../styles/Footer.css';
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="footer" style={{color : "white", fontSize : "15px", padding : "5px", paddingLeft : "20px", textDecoration : "none"}}>
       <Container>
         <Row>
           <Col>

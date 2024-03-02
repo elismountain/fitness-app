@@ -142,10 +142,13 @@ const SignIn = ({ onSubmit }) => {
   <Button
     style={{
       backgroundColor: 'orange',
+      border: 'orange', 
       borderRadius: '10px',
       fontSize: '1.5rem',
       padding: '10px 20px',
       fontWeight: 'bold',
+      marginTop: '30px',
+      marginBottom: '290px'
     }}
     size="lg"
     type="submit"

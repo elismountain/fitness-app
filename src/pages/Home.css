@@ -1,14 +1,18 @@
-h1, h2 {
+.home-title {
     text-align: center;
     padding: 20px;
     color: aliceblue;
+    margin-top: 100px;
+
 }
 
-/* body {
-    background: rgb(72,17,108);
-    background: linear-gradient(110deg, rgb(243, 131, 67) 0%, rgb(67, 6, 52) 100%);
-} */
 
-body {
-    background: linear-gradient(110deg, rgb(243, 131, 67) 0%, rgb(152, 16, 118) 50%, rgb(72, 17, 108) 100%);
+.home-description {
+    text-align: center;
+    padding: 20px;
+    color: aliceblue;
+    margin-bottom: 50px;
+
 }
+
+
