@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Contact.css';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -16,29 +17,42 @@ const Contact = () => {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault(); // Prevents the default form submit action
-    console.log('Form Data:', formData); // Logs form data to console
-    alert("Thanks! We will be in touch!"); // Corrected alert message
-    // Here you could also handle the submission, e.g., sending it to an API or email
+    e.preventDefault(); 
+    console.log('Form Data:', formData); 
+    alert("Thanks! We will be in touch!"); 
   };
 
+
   return (
-    <div>
-      <h1>Contact Me</h1>
+    <div className="container contact-form">
+      <h1 className="contact-header">Contact Us</h1>
       <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="name">Name:</label>
-          <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} />
+        <div className="mb-3">
+          <label htmlFor="name" className="form-label">Name:</label>
+          <input type="text" className="form-control" id="name" name="name" value={formData.name} onChange={handleChange} />
         </div>
-        <div>
-          <label htmlFor="email">Email:</label>
-          <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} />
+        <div className="mb-3">
+          <label htmlFor="email" className="form-label">Email:</label>
+          <input type="email" className="form-control" id="email" name="email" value={formData.email} onChange={handleChange} />
         </div>
-        <div>
-          <label htmlFor="message">Message:</label>
-          <textarea id="message" name="message" value={formData.message} onChange={handleChange}></textarea>
+        <div className="mb-3">
+          <label htmlFor="message" className="form-label">Message:</label>
+          <textarea className="form-control" id="message" name="message" value={formData.message} onChange={handleChange}></textarea>
         </div>
-        <button type="submit">Submit</button>
+        <div className="text-center">
+          <button type="submit" className="btn btn-primary contact-button" 
+          style={      
+            {backgroundColor: 'orange',
+              border: 'orange', 
+              borderRadius: '10px',
+              fontSize: '1.5rem',
+              padding: '10px 20px',
+              fontWeight: 'bold',
+              marginTop: '30px',
+              marginBottom: '290px'}}>
+                Submit</button>
+        </div>
+
       </form>
     </div>
   );
