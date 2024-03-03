@@ -11,11 +11,11 @@ import Contact from './pages/contact';
 import WorkoutPlan from './pages/WorkoutPlan';
 import TimerPage from './pages/TimerPage';
 import { Box } from '@mui/material';
-import { Route, Routes , useLocation} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 
 const App = () => {
   const location = useLocation();
-  const pathsToShowNavbar = ['/exercise/', '/timer-page', '/contact',  '/ProgressTracker','/workout-plan'];
+  const pathsToShowNavbar = ['/exercise/', '/timer-page', '/contact',  '/ProgressTracker','/workout-plan', '/ExerciseDetail', '/TimerPage'];
   const showNavbar = pathsToShowNavbar.some(path => location.pathname.startsWith(path));
 
   return (
@@ -26,12 +26,12 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/exercise/:id" element={<ExerciseDetail />} />
            <Route path="/workout-plan" element={<WorkoutPlan />} />
-           {/* <Route path="/WorkoutPlan" element={<WorkoutPlan />} /> */}
+           <Route path="/TimerPage" element={<TimerPage />} />
           <Route path="/timer-page" element={<TimerPage />} />
-          <Route path="/ExerciseDetail" element={<ExerciseDetail />} />
+          {/* <Route path="/WorkoutPlan" element={<ExerciseDetail />} /> */}
           <Route path="/ProgressTracker" element={<ProgressTracker />} />
         <Route path="/contact" element={<Contact />} /> {/* This line adds the Contact route */}
-        <Route path="/water-tracker" element={<WaterTracker />} /> {/* New route for WaterTracker */}
+        <Route path="/watertracker" element={<WaterTracker />} /> {/* New route for WaterTracker */}
        <Route path="*" element={<Home />} />   
       </Routes>
       </Box>
