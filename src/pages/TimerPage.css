@@ -3,14 +3,15 @@
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     font-size: 30px;
-    text-transform: uppercase;
-    color: orange;
+    text-transform: capitalize;
+    color: white;
     text-align: center;
     grid-template-columns: repeat(2, 1fr); /* Two columns layout for desktop */
     grid-template-rows: auto auto auto; /* Auto rows */
     gap: 20px; /* Adjust gap between grid items */
     grid-template-areas:
       "description timer-wrap"
+      "video-container timer-wrap"
       "demonstration timer-wrap";
   }
   
@@ -28,6 +29,7 @@
   
   .description-header {
     margin-top: 20px;
+    text-transform: uppercase;
   }
   
   .description-text {
@@ -37,16 +39,50 @@
   
   .demonstration {
     grid-area: demonstration;
-    min-width: 300px; /* Minimum width for desktop */
-    height: auto; /* Auto height */
+    min-width: 300px; 
+    height: auto; 
     display: block;
     border: #b3072c solid 5px;
     border-radius: 10px;
     margin-left: 20px;
+    overflow: hidden; 
+    margin-left: 20px;
+    border-radius: 10px; 
+    border: #b3072c solid 5px;
+    }
+
+    .video-container{
+      grid-area: video-container;
+      min-width: 300px; 
+      height: auto; 
+      display: block;
+      border: #b3072c solid 5px;
+      border-radius: 10px;
+      margin-left: 20px;
+      overflow: hidden; 
+      margin-left: 20px;
+      border-radius: 10px; 
+      border: #b3072c solid 5px;
+    }
+  .iframe-wrapper {
+    position: relative;
+    width: 100%; /* Full width of the container */
+    padding-top: 56.25%; /* Aspect ratio for 16:9 videos */
   }
+  
+  .iframe-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none; /* Removes the border around the iframe */
+  }
+
   
   .demonstration-header {
     margin-top: 20px;
+    text-transform: uppercase;
   }
   
   .timer-wrap {
@@ -58,15 +94,19 @@
     .timer-block {
       grid-template-columns: 1fr; /* Single column layout for mobile */
       grid-template-areas:
+        
+        "timer-wrap"
+        "video-container"
         "description"
-        "demonstration"
-        "timer-wrap";
+        "demonstration";
     }
   
     .description,
+    .video-container,
     .demonstration {
-      min-width: 65%; 
+      min-width: 65%;
       margin: 10px 20px; /* Add margin on both sides */
     }
   }
+  
   

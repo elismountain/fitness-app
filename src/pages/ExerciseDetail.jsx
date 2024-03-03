@@ -11,7 +11,7 @@ const ExerciseDetail = () => {
   const goal = searchParams.get("goal");
 
   useEffect(() => {
-    // Check if height and weight are valid numbers before calling calculateBMI
+    
 
     // Assuming calculateBMI expects two arguments: weight and height
     exerciseAPI(goal)
@@ -24,6 +24,7 @@ const ExerciseDetail = () => {
         console.error("Error fetching Exercise API:", error);
       });
   }, [goal]);
+  
 
   return (
     <div className="main-exercise-container">
@@ -40,6 +41,7 @@ const ExerciseDetail = () => {
       ))}
     </div>
   );
+  
 };
 
 export default ExerciseDetail;
