@@ -20,7 +20,9 @@ const MyNavbar = () => {
       </Navbar.Brand>
       <Nav className="me-auto">
         <Link style={{color : "white", fontSize : "18px", padding : "5px", paddingLeft : "20px", textDecoration : "none"}} to="/">Fitness App</Link> 
-        <Link style={{color : "white", fontSize : "18px", padding : "5px", textDecoration : "none"}} to="/WorkoutPlan">Workouts</Link>
+        {/* <Link style={{color : "white", fontSize : "18px", padding : "5px", textDecoration : "none"}} to="/workout-plan">Workouts</Link> */}
+        {/* <Link style={{color : "white", fontSize : "18px", padding : "5px", textDecoration : "none"}} to="/WorkoutPlan">Plan</Link> */}
+
         <Link style={{color : "white", fontSize : "18px", padding : "5px", textDecoration : "none"}}to="/ProgressTracker">Progress Tracker</Link>
         <Link style={{color : "white", fontSize : "18px", padding : "5px", textDecoration : "none"}}to="/contact">Contact Us</Link>
       </Nav>

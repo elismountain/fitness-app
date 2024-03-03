@@ -31,7 +31,7 @@ const App = () => {
           <Route path="/ExerciseDetail" element={<ExerciseDetail />} />
           <Route path="/ProgressTracker" element={<ProgressTracker />} />
         <Route path="/contact" element={<Contact />} /> {/* This line adds the Contact route */}
-        <Route path="/water-tracker" element={<WaterTracker />} /> New route for WaterTracker
+        <Route path="/water-tracker" element={<WaterTracker />} /> {/* New route for WaterTracker */}
        <Route path="*" element={<Home />} />   
       </Routes>
       </Box>
