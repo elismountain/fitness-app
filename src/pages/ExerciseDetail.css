@@ -7,26 +7,31 @@
   flex-wrap: wrap;
   gap: 15px;
   border-radius: 15px;
-  background: white;
+  /* background: white; */
 }
 
 .exercise-container {
+  min-height: 25rem;
+  justify-content: flex-end;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 15px;
 }
 
 .exercise-name{
-  font-size: 24px;
+  width: 18rem;
+  font-size: 20px;
   font-weight: bold;
   text-align: center;
   color: black;
 }
 
 .exercise-img {
-  height: 30dvh;
+  height: 40dvh;
   padding: 20px 20px;
   margin: 20px 20px;
+  object-fit: scale-down;
 }
 
 .timer-page__button {

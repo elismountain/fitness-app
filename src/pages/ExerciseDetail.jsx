@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Card from 'react-bootstrap/Card';
 import { useLocation } from "react-router-dom";
 import exerciseAPI from "../components/exerciseapi";
 import "./ExerciseDetail.css";
@@ -29,15 +30,15 @@ const ExerciseDetail = () => {
   return (
     <div className="main-exercise-container">
       {exercises.map((exercise) => (
-        <div className="exercise-container" key={exercise.id}>
-          <img className="exercise-img" src={exercise.gifUrl} alt="Exercise" />
-          <h4 className="exercise-name">{exercise.name}</h4>
+        <Card className="exercise-container" key={exercise.id}>
+          <Card.Img className="exercise-img" src={exercise.gifUrl} alt="Exercise" />
+          <Card.Title className="exercise-name">{exercise.name}</Card.Title>
           <div className="timer-button_container">
             <Link to="/timer-page" state={{ exercise: exercise }}>
               <button className="timer-page__button">GO</button>
             </Link>
           </div>
-        </div>
+        </Card>
       ))}
     </div>
   );
