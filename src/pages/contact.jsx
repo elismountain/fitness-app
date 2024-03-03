@@ -49,7 +49,8 @@ const Contact = () => {
               padding: '10px 20px',
               fontWeight: 'bold',
               marginTop: '30px',
-              marginBottom: '290px'}}>
+              marginBottom: '290px',
+              outline: 'none'}}>
                 Submit</button>
         </div>
 
