@@ -9,6 +9,7 @@ const EmojiTracker = () => {
   const handleEmojiClick = (emoji) => {
     setEmoji(emoji);
     setIsClicked(true);
+    localStorage.setItem("emoji", emoji)
   };
 
   return (

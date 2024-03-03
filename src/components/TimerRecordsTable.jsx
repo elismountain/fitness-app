@@ -2,6 +2,7 @@ import React from 'react';
 import './Timer.css';
 
 const TimerRecordsTable = ({ records }) => {
+  localStorage.setItem("time", records)
   return (
     <div className="records records-timer__page">
       <h2>Exercise Time Records:</h2>

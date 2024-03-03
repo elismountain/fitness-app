@@ -4,6 +4,7 @@ import EmojiTracker from "../components/emoji";
 import exerciseAPI from "../components/exerciseapi";
 import ExerciseDetail from "./ExerciseDetail";
 import "./WorkoutPlan.css";
+import WaterTracker from "../components/watertracker";
 
 
 
@@ -77,6 +78,7 @@ const WorkoutPlan = () => {
       </div>
       {/* <h1 className="workouts-title">Your workouts</h1> */}
       <ExerciseDetail />
+      <WaterTracker />
     </div>
   );
 };

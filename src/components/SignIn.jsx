@@ -3,11 +3,19 @@ import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 
 
 const SignIn = ({ onSubmit }) => {
-  const [name, setName] = useState('');
-  const [age, setAge] = useState('');
-  const [weight, setWeight] = useState('');
-  const [height, setHeight] = useState('');
-  const [goal, setGoal] = useState('');
+
+  const [name, setName] = useState(localStorage.getItem('name') || '');
+  const [age, setAge] = useState(localStorage.getItem('age') || '');
+  const [weight, setWeight] = useState(localStorage.getItem('weight') || '');
+  const [height, setHeight] = useState(localStorage.getItem('height') || '');
+  const [goal, setGoal] = useState(localStorage.getItem('goal') || '');
+
+
+  // const [name, setName] = useState('');
+  // const [age, setAge] = useState('');
+  // const [weight, setWeight] = useState('');
+  // const [height, setHeight] = useState('');
+  // const [goal, setGoal] = useState('');
   const [nameError, setNameError] = useState('');
   const [ageError, setAgeError] = useState('');
   const [weightError, setWeightError] = useState('');
@@ -52,6 +60,14 @@ const SignIn = ({ onSubmit }) => {
       setGoalError('');
     }
 
+    // storing user data in local storage
+    localStorage.setItem('name', name);
+    localStorage.setItem('age', age);
+    localStorage.setItem('weight', weight);
+    localStorage.setItem('height', height);
+    localStorage.setItem('goal', goal);
+
+
     onSubmit({ name, age, weight, height, goal });
     setName('');
     setAge('');
@@ -74,7 +90,7 @@ const SignIn = ({ onSubmit }) => {
                 placeholder="Enter your name"
                 isInvalid={!!nameError}
               />
-              <Form.Control.Feedback style={{color: 'white',fontSize : "20px",padding : "10px", fontWeight: 'bold'}} type="invalid">{nameError}</Form.Control.Feedback>
+              <Form.Control.Feedback type="invalid">{nameError}</Form.Control.Feedback>
             </Form.Group>
             <Form.Group controlId="age">
               <Form.Label style={{ color:  'white'}}>Age:</Form.Label>
@@ -86,7 +102,7 @@ const SignIn = ({ onSubmit }) => {
                 isInvalid={!!ageError}
                 min="10"
               />
-              <Form.Control.Feedback style={{color: 'white', fontSize : "20px",padding : "10px", fontWeight: 'bold'}} type="invalid">{ageError}</Form.Control.Feedback>
+              <Form.Control.Feedback type="invalid">{ageError}</Form.Control.Feedback>
             </Form.Group>
             <Form.Group controlId="weight">
               <Form.Label style={{ color:  'white'}}>Weight (in kg) : </Form.Label>
@@ -98,7 +114,7 @@ const SignIn = ({ onSubmit }) => {
                 isInvalid={!!weightError}
                 min="10"
               />
-              <Form.Control.Feedback style={{fontSize : "20px",padding : "10px", color: 'white', fontWeight: 'bold'}} type="invalid">{weightError}</Form.Control.Feedback>
+              <Form.Control.Feedback type="invalid">{weightError}</Form.Control.Feedback>
             </Form.Group>
             <Form.Group controlId="height">
               <Form.Label style={{ color:  'white'}}>Height (in meter) :</Form.Label>
@@ -113,7 +129,7 @@ const SignIn = ({ onSubmit }) => {
                 // max="2.30"
               />
                  
-              <Form.Control.Feedback style={{fontSize : "20px",padding : "10px", color: 'white', fontWeight: 'bold'}} type="invalid">{heightError}</Form.Control.Feedback>
+              <Form.Control.Feedback type="invalid">{heightError}</Form.Control.Feedback>
             </Form.Group>
             <Form.Group controlId="goal">
               <Form.Label style={{ color:  'white'}}>Goal:</Form.Label>
@@ -135,7 +151,7 @@ const SignIn = ({ onSubmit }) => {
                 <option value="Upper legs">Upper Legs</option>
                 <option value="Waist">Waist</option>
               </Form.Control>
-              <Form.Control.Feedback style={{fontSize : "20px",padding : "10px", color: 'white', fontWeight: 'bold'}} type="invalid">{goalError}</Form.Control.Feedback>
+              <Form.Control.Feedback type="invalid">{goalError}</Form.Control.Feedback>
             </Form.Group>
             <br />
             <div style={{ display: 'flex', justifyContent: 'center' }}>

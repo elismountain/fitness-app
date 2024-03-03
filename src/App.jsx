@@ -15,7 +15,7 @@ import { Route, Routes , useLocation} from 'react-router-dom';
 
 const App = () => {
   const location = useLocation();
-  const pathsToShowNavbar = ['/exercise/', '/timer-page', '/contact',];
+  const pathsToShowNavbar = ['/exercise/', '/timer-page', '/contact',  '/ProgressTracker','/workout-plan'];
   const showNavbar = pathsToShowNavbar.some(path => location.pathname.startsWith(path));
 
   return (
@@ -25,12 +25,13 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/exercise/:id" element={<ExerciseDetail />} />
-           <Route path="/WorkoutPlan" element={<WorkoutPlan />} />
+           <Route path="/workout-plan" element={<WorkoutPlan />} />
+           {/* <Route path="/WorkoutPlan" element={<WorkoutPlan />} /> */}
           <Route path="/timer-page" element={<TimerPage />} />
           <Route path="/ExerciseDetail" element={<ExerciseDetail />} />
-          <Route path="/progresstracker" element={<ProgressTracker />} />
+          <Route path="/ProgressTracker" element={<ProgressTracker />} />
         <Route path="/contact" element={<Contact />} /> {/* This line adds the Contact route */}
-        <Route path="/water-tracker" element={<WaterTracker />} /> {/* New route for WaterTracker */}
+        <Route path="/water-tracker" element={<WaterTracker />} /> New route for WaterTracker
        <Route path="*" element={<Home />} />   
       </Routes>
       </Box>
