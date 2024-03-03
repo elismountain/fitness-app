@@ -4,16 +4,17 @@
   .watertracker {
     max-width: 80%; 
     margin: auto; 
-    padding: 20px;
+    padding: 10px;
     background-color: rgba(0, 0, 0, 0.089);
     color : "white";
     border-radius: 8px; 
     box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+    margin-bottom : 10px;
   }
   
   .watertracker h2 {
     color: white; 
-    margin-bottom: 16px;
+    margin-bottom: 10px;
   }
   
   .watertracker p {

@@ -1,17 +1,20 @@
 .home-title {
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     color: aliceblue;
-    margin-top: 100px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 3rem;
 
 }
 
 
 .home-description {
     text-align: center;
-    padding: 20px;
+    font-size: 1.7rem;
+    padding: 10px;
     color: aliceblue;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 
 }
 
