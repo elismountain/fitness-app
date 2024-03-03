@@ -121,8 +121,8 @@ const SignIn = ({ onSubmit }) => {
                 onChange={(e) => setHeight(e.target.value)}
                 placeholder="Enter your height in metres. Eg 1.75"
                 isInvalid={!!heightError}
-                // min="1.10"
-                // max="2.30"
+                min="1.10"
+                max="2.30"
               />
                  
               <Form.Control.Feedback style={{color : "white", fontSize : "20px"}} type="invalid">{heightError}</Form.Control.Feedback>
@@ -160,7 +160,8 @@ const SignIn = ({ onSubmit }) => {
       padding: '10px 20px',
       fontWeight: 'bold',
       marginTop: '30px',
-      marginBottom: '290px'
+      marginBottom: '290px',
+      outline: 'none'
     }}
     size="lg"
     type="submit"
