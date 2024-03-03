@@ -10,7 +10,19 @@ const TimerPage = () => {
 
   return (
     <div className="timer-block">
-        <div className="video-container">
+      
+      <div className="description">
+        <h2 className='description-header'>
+          {exercise.name}
+          </h2>
+        <p className="description-text">
+          {exercise.instructions}
+          </p>
+      </div>
+      <div className="video-container">
+      <h2 className='description-header'>
+          Warm Up
+          </h2>
       <iframe
         width="560"
         height="315"
@@ -20,14 +32,6 @@ const TimerPage = () => {
         allowFullScreen
       ></iframe>
     </div>
-      <div className="description">
-        <h2 className='description-header'>
-          {exercise.name}
-          </h2>
-        <p className="description-text">
-          {exercise.instructions}
-          </p>
-      </div>
       <div className="demonstration">
         <h2 className='demonstration-header'>Video/GIF Demonstration</h2>
         <iframe src={exercise.gifUrl} width="560" height="315">
