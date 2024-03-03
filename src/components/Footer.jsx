@@ -1,19 +1,24 @@
-import React from 'react'
-import { Container, Row, Col } from 'react-bootstrap';
+
+import React from 'react';
 import '../styles/Footer.css';
 
 const Footer = () => {
   return (
-    <footer className="footer" style={{color : "white", fontSize : "15px", padding : "5px", paddingLeft : "20px", textDecoration : "none"}}>
-      <Container>
-        <Row>
-          <Col>
-            <p>&copy; 2024 Wonder Woman Workout Project</p>
-          </Col>
-        </Row>
-      </Container>
+    <footer className="footer">
+          <ul className="contacts__media-list">
+            <li className="copywrite contacts__media-item">
+              <p> <b> HappyFiit </b> workout project &copy; <b>2024</b></p>
+            </li>
+            <li className="contacts__media-item">
+              <a className="contacts__media-button button" href="https://github.com/elismountain/fitness-app" aria-label="GitHub">
+                <span className="iconify" data-icon="simple-icons:github" data-inline="false"></span>
+              </a>
+            </li>
+          </ul>
     </footer>
-  )
+  );
 }
 
 export default Footer;
+
+
