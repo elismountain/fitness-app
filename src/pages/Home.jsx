@@ -14,7 +14,7 @@ const Home = () => {
   return (
     <div className= "body">
       <h1 className="home-title">HappyFiit</h1>
-      <h2 className="home-description">More than fitness, its your happy place.</h2>
+      <h2 className="home-description">More than fitness, it's your happy place.</h2>
       <SignIn onSubmit={handleSubmit} />
     </div>
   );

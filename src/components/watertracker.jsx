@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import "../styles/watertracker.css"
 
 const WaterTracker = () => {
   const [intake, setIntake] = useState(() => {
