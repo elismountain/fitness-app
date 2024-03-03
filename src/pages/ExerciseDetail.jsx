@@ -2,15 +2,13 @@ import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import exerciseAPI from "../components/exerciseapi";
 import "./ExerciseDetail.css";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-const ExerciseDetail = (goal1) => {
+const ExerciseDetail = () => {
   const [exercises, setExercises] = useState([]);
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
-  const username = searchParams.get("username");
   const goal = searchParams.get("goal");
-
 
   useEffect(() => {
     // Check if height and weight are valid numbers before calling calculateBMI
@@ -23,42 +21,22 @@ const ExerciseDetail = (goal1) => {
         setExercises(data);
       })
       .catch((error) => {
-        console.error("Error fetching BMI:", error);
+        console.error("Error fetching Exercise API:", error);
       });
   }, [goal]);
 
-  // useEffect(() => {
-  //   const fetchExercises = async () => {
-  //     try {
-  //       const fetchedExercises = await exerciseAPI();
-  //       setExercises(fetchedExercises);
-  //     } catch (error) {
-  //       console.error("Error fetching exercises:", error);
-  //     }
-  //   };
-
-  //   fetchExercises();
-  // }, []);
-
   return (
     <div className="main-exercise-container">
-      {exercises.map((exercise, index) => (
-          <div className="exercise-container" key={index}>
-            
-            {/* <div className="info"> */}
-              {/* <p className="instructions">
-                Instructions: {exercise.instructions}
-              </p> */}
-              <img className="exercise-img" src={exercise.gifUrl} alt="Exercise" />
-            {/* </div> */}
-            <h4 className="exercise-name">{exercise.name}</h4>
-            <div className="timer-button_container">
-            <Link to="/timer-page">
+      {exercises.map((exercise) => (
+        <div className="exercise-container" key={exercise.id}>
+          <img className="exercise-img" src={exercise.gifUrl} alt="Exercise" />
+          <h4 className="exercise-name">{exercise.name}</h4>
+          <div className="timer-button_container">
+            <Link to="/timer-page" state={{ exercise: exercise }}>
               <button className="timer-page__button">GO</button>
             </Link>
-            </div>
-
           </div>
+        </div>
       ))}
     </div>
   );
