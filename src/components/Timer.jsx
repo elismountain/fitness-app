@@ -9,6 +9,8 @@ const Timer = () => {
   const [startTime, setStartTime] = useState(null); 
   const [records, setRecords] = useState([]);
 
+  
+
   useEffect(() => {
     let interval;
     if (timerOn && !isPaused && time > 0) {
@@ -59,6 +61,14 @@ const Timer = () => {
     const seconds = time % 60;
     return `${minutes < 10 ? '0' + minutes : minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
   };
+
+  // React hook added to store the duration of exercise
+  useEffect(() => {
+   
+    const durations = records.map(record => record.duration);
+    localStorage.setItem('timerDurations', JSON.stringify(durations));
+  }, [records]);
+  
 
   return (
     <div>

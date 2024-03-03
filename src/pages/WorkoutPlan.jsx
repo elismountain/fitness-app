@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import calculateBMI from "../components/BMI";
 import EmojiTracker from "../components/emoji";
 import exerciseAPI from "../components/exerciseapi";
-import weightCategory from "../components/weightCategory";
 import ExerciseDetail from "./ExerciseDetail";
 import "./WorkoutPlan.css";
+import WaterTracker from "../components/watertracker";
 
 
 
@@ -15,39 +14,44 @@ const WorkoutPlan = () => {
   const username = searchParams.get("username");
   const goal = searchParams.get("goal");
 
-  // Directly parse to float here to avoid re-declaring inside useEffect
+  // parse float the user input
   const height = parseFloat(searchParams.get("height"));
   const weight = parseFloat(searchParams.get("weight"));
 
   const [bmi, setBmi] = useState("");
   const [exercise, setExercise] = useState([]);
-  const [weightC, setWeightCategory] = useState("");
+  const [weightCategory, setWeightCategory] = useState("");
 
-  // useeffect hook to calculate bmi
-  useEffect(() => {
-    console.log(weight, height);
-    // Check if height and weight are valid numbers before calling calculateBMI
-    if (!isNaN(height) && !isNaN(weight)) {
-      calculateBMI(weight, height)
-        .then((data) => {
-          console.log(`Data received from BMI call:`, data);
-          // Assuming data is the BMI value directly; adjust according to your function's return structure
-          setBmi(data.bmi);
-        })
-        .catch((error) => {
-          console.error("BMI calculation error:", error);
-        });
+
+  useEffect(()=>{ 
+    const userBMI = weight / (height * height);
+    setBmi(userBMI)
+  
+    if (userBMI <= 18.5){
+      setWeightCategory("Under Weight")
     }
-  }, [weight, height]);
-  // trial
-  useEffect(() => {
-    // Check if height and weight are valid numbers before calling calculateBMI
+    else if ((userBMI >=18.5) && (userBMI <=24.9)){
+      setWeightCategory("Healthy")
+    }
+    else if((userBMI >=25) &&(userBMI <= 29.9)) {
+      setWeightCategory("Over Weight")
+    }
+    else if (userBMI >=30){
+      setWeightCategory("Obese")
+    }
+    else {
+      setWeightCategory("Check Input Values")
+    }},[weight, height])
+   
 
-    // Assuming calculateBMI expects two arguments: weight and height
+
+  useEffect(() => {
+   
+
+ // calling the api call for chosen goal 
     exerciseAPI(goal)
       .then((data) => {
         console.log(data);
-        // Check if data and data.bmi exist before calling setBmi to avoid errors
         setExercise(data);
       })
       .catch((error) => {
@@ -55,22 +59,7 @@ const WorkoutPlan = () => {
       });
   }, [goal]);
 
-  // react hook to fetch weight category
-  useEffect(() => {
-    console.log(bmi);
-    // Check if height and weight are valid numbers before calling calculateBMI
-    if (bmi > 0) {
-      weightCategory(bmi)
-        .then((data) => {
-          console.log(`Data received from weight category call:`, data);
-          // Assuming data is the BMI value directly; adjust according to your function's return structure
-          setWeightCategory(data.weightCategory);
-        })
-        .catch((error) => {
-          console.error("Weight Category calculation error:", error);
-        });
-    }
-  }, [bmi]);
+ 
 
   return (
     <div className="full-container">
@@ -83,7 +72,7 @@ const WorkoutPlan = () => {
 
       <div className="bmi-result">
         {bmi && <p>Your BMI is: {bmi.toFixed(2)}</p>}
-        {weightC && <p>Your BMI is within the {weightC} category</p>}
+        {weightCategory && <p>BMI category : {weightCategory} </p>}
 
         
         {goal && <p>Goal for today : {goal}</p>}
@@ -91,6 +80,7 @@ const WorkoutPlan = () => {
       </div>
       {/* <h1 className="workouts-title">Your workouts</h1> */}
       <ExerciseDetail />
+      <WaterTracker />
     </div>
   );
 };
