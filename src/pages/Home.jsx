@@ -13,8 +13,8 @@ const Home = () => {
 
   return (
     <div className= "body">
-      <h1 className="home-title">WONDER WOMAN WORKOUT</h1>
-      <h2 className="home-description">Every workout is a step towards becoming Wonder Woman </h2>
+      <h1 className="home-title">HappyFiit</h1>
+      <h2 className="home-description">More than fitness, its your happy place.</h2>
       <SignIn onSubmit={handleSubmit} />
     </div>
   );
