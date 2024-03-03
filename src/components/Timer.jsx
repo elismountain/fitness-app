@@ -44,16 +44,19 @@ const Timer = () => {
   };
 
   const stopTimer = () => {
-    setTime(600); 
-    setTimerOn(false);
-    setIsPaused(false);
-    const endTime = new Date();
-    let durationInSeconds = Math.abs(endTime - startTime) / 1000; 
-    let durationInMinutes = Math.ceil(durationInSeconds / 60); 
-    if (durationInMinutes === 0) {
-      durationInMinutes = 1; 
+    if(startTime) {
+      setTime(600); 
+      setTimerOn(false);
+      setIsPaused(false);
+      const endTime = new Date();
+      let durationInSeconds = Math.abs(endTime - startTime) / 1000; 
+      let durationInMinutes = Math.ceil(durationInSeconds / 60); 
+      if (durationInMinutes === 0) {
+        durationInMinutes = 1; 
+      }
+      setRecords(prevRecords => [...prevRecords, { startTime, duration: durationInMinutes }]);
+
     }
-    setRecords(prevRecords => [...prevRecords, { startTime, duration: durationInMinutes }]);
   };
 
   const formatTime = (time) => {

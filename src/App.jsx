@@ -7,7 +7,7 @@ import MyNavbar from './components/MyNavbar';
 import Footer from './components/Footer';
 import ProgressTracker from './pages/progresstracker';
 import WaterTracker from './components/watertracker'; // Import WaterTracker component
-import Contact from './pages/contact';
+import Contact from './pages/Contact';
 import WorkoutPlan from './pages/WorkoutPlan';
 import TimerPage from './pages/TimerPage';
 import { Box } from '@mui/material';
@@ -30,7 +30,7 @@ const App = () => {
           <Route path="/timer-page" element={<TimerPage />} />
           {/* <Route path="/WorkoutPlan" element={<ExerciseDetail />} /> */}
           <Route path="/ProgressTracker" element={<ProgressTracker />} />
-        <Route path="/contact" element={<Contact />} /> {/* This line adds the Contact route */}
+        <Route path="/Contact" element={<Contact />} /> {/* This line adds the Contact route */}
         <Route path="/watertracker" element={<WaterTracker />} /> {/* New route for WaterTracker */}
        <Route path="*" element={<Home />} />   
       </Routes>
