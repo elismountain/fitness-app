@@ -30,7 +30,7 @@ const App = () => {
           <Route path="/timer-page" element={<TimerPage />} />
           {/* <Route path="/WorkoutPlan" element={<ExerciseDetail />} /> */}
           <Route path="/ProgressTracker" element={<ProgressTracker />} />
-        <Route path="/contact" element={<Contact />} /> {/* This line adds the Contact route */}
+        <Route path="/Contact" element={<Contact />} /> {/* This line adds the Contact route */}
         <Route path="/watertracker" element={<WaterTracker />} /> {/* New route for WaterTracker */}
        <Route path="*" element={<Home />} />   
       </Routes>
