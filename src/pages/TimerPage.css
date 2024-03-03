@@ -3,7 +3,7 @@
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     font-size: 30px;
-    text-transform: uppercase;
+    text-transform: capitalize;
     color: white;
     text-align: center;
     grid-template-columns: repeat(2, 1fr); /* Two columns layout for desktop */
@@ -29,6 +29,7 @@
   
   .description-header {
     margin-top: 20px;
+    text-transform: uppercase;
   }
   
   .description-text {
@@ -44,20 +45,44 @@
     border: #b3072c solid 5px;
     border-radius: 10px;
     margin-left: 20px;
-    
-  }
-  .video-container{
-    grid-area: video-container;
-    min-width: 300px; 
-    height: auto; 
-    display: block;
-    border: #b3072c solid 5px;
-    border-radius: 10px;
+    overflow: hidden; 
     margin-left: 20px;
+    border-radius: 10px; 
+    border: #b3072c solid 5px;
+    }
+
+    .video-container{
+      grid-area: video-container;
+      min-width: 300px; 
+      height: auto; 
+      display: block;
+      border: #b3072c solid 5px;
+      border-radius: 10px;
+      margin-left: 20px;
+      overflow: hidden; 
+      margin-left: 20px;
+      border-radius: 10px; 
+      border: #b3072c solid 5px;
+    }
+  .iframe-wrapper {
+    position: relative;
+    width: 100%; /* Full width of the container */
+    padding-top: 56.25%; /* Aspect ratio for 16:9 videos */
   }
+  
+  .iframe-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none; /* Removes the border around the iframe */
+  }
+
   
   .demonstration-header {
     margin-top: 20px;
+    text-transform: uppercase;
   }
   
   .timer-wrap {
@@ -77,9 +102,11 @@
     }
   
     .description,
+    .video-container,
     .demonstration {
-      min-width: 100%;
+      min-width: 65%;
       margin: 10px 20px; /* Add margin on both sides */
     }
   }
+  
   
