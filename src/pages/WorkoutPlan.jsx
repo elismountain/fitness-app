@@ -73,6 +73,7 @@ const WorkoutPlan = () => {
   }, [bmi]);
 
   return (
+    <div className="full-container">
     <div className="bmi-container">
       <h2 className="bmi-name" style={{ alignItems: "left" }}> Hello , {username}</h2>
       <div className="emoji-wrapper">
@@ -86,6 +87,7 @@ const WorkoutPlan = () => {
 
         
         {goal && <p>Goal for today : {goal}</p>}
+      </div>
       </div>
       {/* <h1 className="workouts-title">Your workouts</h1> */}
       <ExerciseDetail />
