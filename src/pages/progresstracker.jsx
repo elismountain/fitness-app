@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import "./progresstracker.css";
 
 const ProgressTracker = () => {
   
@@ -26,13 +27,19 @@ const ProgressTracker = () => {
   }, []);
 
   return (
-    <div>
+    <div className='description-container'>
       <div className="description">
-        <h2 className='description-header'>Your Progress </h2>
-        <p className="description-text">Mood : {mood} </p>
-        <p className="description-text">Water Intake : {waterIntake}</p>
-        <p className="description-text">Goals achieved : {goalAchieved} </p>
-        <p className="description-text">Duration of Exercise : {durationOfExercise} minutes </p>
+        <h2 className='description-header'>Your Progress</h2>
+        <div className='description-text-container'>
+          <div className='description-text'>
+        <h5 className="description-text-title">Mood</h5><p> {mood} </p></div>
+        <div className='description-text'>
+        <h5 className="description-text-title">Water Intake</h5><p> {waterIntake}</p></div>
+        <div className='description-text'>
+        <h5 className="description-text-title">Goals achieved</h5><p> {goalAchieved} </p></div>
+        <div className='description-text'>
+<h5 className="description-text-title">Duration of Exercise</h5><p> {durationOfExercise} minutes </p></div>
+      </div>
       </div>
       <button onClick={clearData}>CLEAR ALL DATA</button>
     </div>

@@ -21,7 +21,7 @@
     align-items: center;
     min-width: 300px; /* Minimum width for desktop */
     height: auto; /* Auto height */
-    border: #b3072c solid 5px;
+    /* border: #b3072c solid 5px; */
     border-radius: 10px;
     margin-left: 20px;
   }
