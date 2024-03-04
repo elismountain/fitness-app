@@ -7,7 +7,7 @@ import MyNavbar from './components/MyNavbar';
 import Footer from './components/Footer';
 import ProgressTracker from './pages/progresstracker';
 import WaterTracker from './components/watertracker'; // Import WaterTracker component
-import Contact from './pages/contact';
+import Contact from './pages/Contact';
 import WorkoutPlan from './pages/WorkoutPlan';
 import TimerPage from './pages/TimerPage';
 import { Box } from '@mui/material';
