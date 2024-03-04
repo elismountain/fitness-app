@@ -12,19 +12,37 @@ const WorkoutPlan = () => {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const username = searchParams.get("username");
-  const goal = searchParams.get("goal");
+  const usergoal = searchParams.get("goal");
 
   // parse float the user input
   const height = parseFloat(searchParams.get("height"));
   const weight = parseFloat(searchParams.get("weight"));
+
+  const storedHeight = localStorage.getItem("height");
+  const userHeight = height || storedHeight
+
+  const storedWeight = localStorage.getItem("weight");
+  const userWeight = weight || storedWeight
+
+  const storedGoal = localStorage.getItem("goal");
+  const goal =  usergoal || storedGoal
+
   
 
   const [bmi, setBmi] = useState("");
   const [exercise, setExercise] = useState([]);
   const [weightCategory, setWeightCategory] = useState("");
 
+
+  // re using saved data from local storage
+  const storedName = localStorage.getItem("name")
+  const userName = username || storedName
+
+
+
+
   useEffect(() => {
-    const userBMI = weight / (height * height);
+    const userBMI = userWeight / (userHeight * userHeight);
     setBmi(userBMI);
 
     if (userBMI <= 18.5) {
@@ -57,7 +75,7 @@ const WorkoutPlan = () => {
       <div className="bmi-container">
         <h2 className="bmi-name" style={{ alignItems: "left" }}>
           {" "}
-          Hello , {username}
+          Hello , {userName}
         </h2>
         <div className="emoji-wrapper">
           <p className="bmi-feeling">How are you feeling today?</p>
@@ -74,15 +92,7 @@ const WorkoutPlan = () => {
       {/* <h1 className="workouts-title">Your workouts</h1> */}
       <WaterTracker />
       <ExerciseDetail goal={goal} />
-
-      {/* <div className="container-fluid d-flex justify-content-center align-items-center" style={{ height: "10%" }}>
-  <Link to="/ProgressTracker" className="progress-button" style={{ textAlign: "center" }}>View Progress</Link>
-</div> */}
-
-     
-
-      
-    </div>
+      </div>
   );
 };
 
