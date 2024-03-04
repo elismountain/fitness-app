@@ -27,8 +27,8 @@ const TimerPage = () => {
       </div>
       <div className="video-container">
         <h2 className="demonstration-header">Warm Up</h2>
-        <div className="iframe-wrapper">
-          <iframe
+        <div className="iframe-wrapper_video">
+          <iframe 
             width="560"
             height="315"
             src="https://www.youtube.com/embed/qZkxKTxXY8M?si=sDBmxv_V6acpbY-i"

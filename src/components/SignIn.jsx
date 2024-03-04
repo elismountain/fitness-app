@@ -74,7 +74,7 @@ const SignIn = ({ onSubmit }) => {
   };
 
   return (
-    <Container className="d-flex justify-content-center align-items-center vh-75">
+    <Container className="d-flex justify-content-center align-items-center vh-35">
       <Row>
         <Col>
           <Form onSubmit={handleSubmit}>
@@ -161,7 +161,7 @@ const SignIn = ({ onSubmit }) => {
       padding: '10px 20px',
       fontWeight: 'bold',
       marginTop: '30px',
-      marginBottom: '290px',
+      marginBottom: '150px',
       outline: 'none'
     }}
     size="lg"
