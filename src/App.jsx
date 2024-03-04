@@ -25,10 +25,11 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/exercise/:id" element={<ExerciseDetail />} />
+           <Route path="/ExerciseDetail" element={<ExerciseDetail />} />
            <Route path="/workout-plan" element={<WorkoutPlan />} />
            <Route path="/TimerPage" element={<TimerPage />} />
           <Route path="/timer-page" element={<TimerPage />} />
-          {/* <Route path="/WorkoutPlan" element={<ExerciseDetail />} /> */}
+          <Route path="/WorkoutPlan" element={<ExerciseDetail />} />
           <Route path="/ProgressTracker" element={<ProgressTracker />} />
         <Route path="/Contact" element={<Contact />} /> {/* This line adds the Contact route */}
         <Route path="/watertracker" element={<WaterTracker />} /> {/* New route for WaterTracker */}

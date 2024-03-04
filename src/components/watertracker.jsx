@@ -53,7 +53,7 @@ const WaterTracker = () => {
       {/* <p>Today's intake: {intake}ml of {goal}ml</p> */}
       <div className='inputs container d-flex flex-column justify-content-evenly '>  
         <div className='field'>
-        <label>  Add ml : </label>
+        <label>  Add (ml) : </label>
         <input type="number" max="3000"  style={{ width: '60px', backgroundColor : 'rgba(0, 0, 0, 0.089)' , color : "white" }} value={addAmount} onChange={handleAddAmountChange} />
 
       </div>

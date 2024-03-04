@@ -25,18 +25,18 @@ const Contact = () => {
 
   return (
     <div className="container contact-form">
-      <h1 className="contact-header">Contact Us</h1>
+      <h2 className="contact-header">Contact Us</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
-          <label htmlFor="name" className="form-label">Name:</label>
+          <label htmlFor="name" style={{ color:  'white', fontSize : "1.5rem", margin : "10px"}} className="form-label">Name:</label>
           <input type="text" className="form-control" id="name" name="name" value={formData.name} onChange={handleChange} />
         </div>
         <div className="mb-3">
-          <label htmlFor="email" className="form-label">Email:</label>
+          <label htmlFor="email" style={{ color:  'white', fontSize : "1.5rem", margin : "10px"}} className="form-label">Email:</label>
           <input type="email" className="form-control" id="email" name="email" value={formData.email} onChange={handleChange} />
         </div>
         <div className="mb-3">
-          <label htmlFor="message" className="form-label">Message:</label>
+          <label htmlFor="message" style={{ color:  'white', fontSize : "1.5rem", margin : "10px"}} className="form-label">Message:</label>
           <textarea className="form-control" id="message" name="message" value={formData.message} onChange={handleChange}></textarea>
         </div>
         <div className="text-center">
