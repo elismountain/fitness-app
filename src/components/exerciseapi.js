@@ -6,7 +6,7 @@ const exerciseAPI = async (goal) => {
   console.log(goal1)
 
   // add own api key
-  // let rapidApiKey = ""; 
+  let rapidApiKey = "782a4f5d39mshfed6b9e82b8570cp19c875jsn47975f1203a0"; 
 
   const options = {
     method: 'GET',
