@@ -8,14 +8,14 @@ import { Link } from "react-router-dom";
 const ExerciseDetail = () => {
   const [exercises, setExercises] = useState([]);
   const location = useLocation();
-  const searchParams = new URLSearchParams(location.search);
-  const goal = searchParams.get("goal");
-
+  const userGoal = new URLSearchParams(location.search).get("goal")
+  const storedGoal = localStorage.getItem("goal")
+  const goal = userGoal || storedGoal
+  
+  
   useEffect(() => {
-    
-
-    // Assuming calculateBMI expects two arguments: weight and height
-    exerciseAPI(goal)
+    if(goal){
+      exerciseAPI(goal, storedGoal)
       .then((data) => {
         console.log(data);
         // Check if data and data.bmi exist before calling setBmi to avoid errors
@@ -24,7 +24,7 @@ const ExerciseDetail = () => {
       .catch((error) => {
         console.error("Error fetching Exercise API:", error);
       });
-  }, [goal]);
+  }}, [goal]);
   
 
   return (

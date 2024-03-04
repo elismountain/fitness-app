@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
+import './SignIn.css';
 
 
 const SignIn = ({ onSubmit }) => {
@@ -73,10 +74,10 @@ const SignIn = ({ onSubmit }) => {
   };
 
   return (
-    <Container className="d-flex justify-content-center align-items-center vh-75">
+    <Container className="d-flex justify-content-center align-items-center vh-35">
       <Row>
         <Col>
-          <Form onSubmit={handleSubmit} style={{ minWidth: '700px' }}>
+          <Form onSubmit={handleSubmit}>
             <Form.Group controlId="name">
               <Form.Label style={{ color:  'white', fontSize : "1.5rem", margin : "10px"}}>Name :</Form.Label>
               <Form.Control
@@ -160,7 +161,7 @@ const SignIn = ({ onSubmit }) => {
       padding: '10px 20px',
       fontWeight: 'bold',
       marginTop: '30px',
-      marginBottom: '290px',
+      marginBottom: '150px',
       outline: 'none'
     }}
     size="lg"

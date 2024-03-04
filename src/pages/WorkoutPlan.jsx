@@ -5,6 +5,8 @@ import exerciseAPI from "../components/exerciseapi";
 import ExerciseDetail from "./ExerciseDetail";
 import "./WorkoutPlan.css";
 import WaterTracker from "../components/watertracker";
+import { Button } from "react-bootstrap";
+import { Link } from 'react-router-dom';
 
 const WorkoutPlan = () => {
   const location = useLocation();
@@ -15,6 +17,7 @@ const WorkoutPlan = () => {
   // parse float the user input
   const height = parseFloat(searchParams.get("height"));
   const weight = parseFloat(searchParams.get("weight"));
+  
 
   const [bmi, setBmi] = useState("");
   const [exercise, setExercise] = useState([]);
@@ -71,6 +74,13 @@ const WorkoutPlan = () => {
       {/* <h1 className="workouts-title">Your workouts</h1> */}
       <WaterTracker />
       <ExerciseDetail goal={goal} />
+
+      <div className="container-fluid d-flex justify-content-center align-items-center" style={{ height: "10%" }}>
+  <Link to="/ProgressTracker" className="progress-button" style={{ textAlign: "center" }}>View Progress</Link>
+</div>
+
+     
+
       
     </div>
   );

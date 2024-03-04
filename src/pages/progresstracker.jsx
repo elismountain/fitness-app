@@ -34,7 +34,7 @@ const ProgressTracker = () => {
   return (
     <div className="description-container">
       <div className="description">
-        <h2 className="description-header">Your Progress</h2>
+        <h2 className="description-header" >Your Progress</h2>
         <div className="description-text-container">
           <div className="description-text">
             <h5 className="description-text-title">Mood</h5>
