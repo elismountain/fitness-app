@@ -34,6 +34,18 @@ const MyNavbar = () => {
                 marginRight: "40px",
                 textDecoration: "none",
               }}
+              to="/workout-plan"
+            >
+              Exercises
+            </Link>
+            <Link
+              style={{
+                color: "white",
+                fontSize: "1.3rem",
+                padding: "5px",
+                marginRight: "40px",
+                textDecoration: "none",
+              }}
               to="/ProgressTracker"
             >
               Progress Tracker

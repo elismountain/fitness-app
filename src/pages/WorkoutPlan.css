@@ -26,13 +26,13 @@
   .bmi-container {
     display: grid; 
     grid-template-columns: 1fr 1fr; 
-    grid-template-rows: 1fr 1fr ; 
+    grid-template-rows: 0.3fr 1fr 1fr ; 
     gap: 0px 0px; 
     grid-template-areas: 
       "bmi-name bmi-name"
       "bmi-result emoji-wrapper"
       "main-exercise-container main-exercise-container";
-      padding: 20px;
+      padding: 30px;
       color: aliceblue;
 
   }
@@ -45,6 +45,7 @@
     grid-area: bmi-name;
     text-align: center;
     text-transform: uppercase;
+    padding: 0%;
  }
 
   .bmi-result { 
