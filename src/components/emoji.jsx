@@ -27,7 +27,7 @@ const EmojiTracker = () => {
             </button>
           ))
         ) : (
-          <p style={{fontSize : "1.6rem", textTransform : "capitalize"}}>{selectedEmoji} </p>
+          <p style={{fontSize : "1.6rem", textTransform : "capitalize"}}>Current Mood :{selectedEmoji} </p>
           
         )}
       </div>

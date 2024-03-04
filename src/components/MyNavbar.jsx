@@ -7,7 +7,7 @@ import { auto } from "@popperjs/core";
 
 const MyNavbar = () => {
   return (
-    <Navbar style={{ backgroundColor: 'rgba(0, 0, 0, 0.089)' }} variant="dark" expand="lg">
+    <Navbar style={{ backgroundColor: 'rgba(0, 0, 0, 0.089)', marginBottom : "40px" }} variant="dark" expand="lg">
       <Container>
         <Navbar.Brand to="#home">
           {/* Your Logo here */}
@@ -19,12 +19,24 @@ const MyNavbar = () => {
               style={{
                 color: "white",
                 fontSize: "1.6rem",
-                marginRight: "600px",
+                marginRight: "500px",
                 textDecoration: "none",
               }}
               to="/"
             >
               HappyFiit
+            </Link>
+            <Link
+              style={{
+                color: "white",
+                fontSize: "1.3rem",
+                padding: "5px",
+                marginRight: "40px",
+                textDecoration: "none",
+              }}
+              to="/ExerciseDetail"
+            >
+              Exercises
             </Link>
             <Link
               style={{
