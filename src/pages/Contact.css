@@ -1,6 +1,9 @@
 .contact-form {
     color: #fff;
     margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .contact-header {
