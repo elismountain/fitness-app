@@ -4,7 +4,8 @@ const exerciseAPI = async (goal) => {
   let goal1= goal.toLowerCase()
   console.log(goal1)
 
-  // let rapidApiKey = "8d53762f7cmsh85d426eae7f5ae5p1c21c7jsnbe6b01f1cc80";
+  // add own api key
+  // let rapidApiKey = ""; 
 
   const options = {
     method: 'GET',

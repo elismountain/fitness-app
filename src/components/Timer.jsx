@@ -92,7 +92,7 @@ const Timer = () => {
         )}
         <button onClick={stopTimer}>Stop</button>
       </div>
-      <TimerRecordsTable records={records} />
+      {/* <TimerRecordsTable records={records} /> */}
     </div>
   );
 };
