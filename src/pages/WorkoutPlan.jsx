@@ -69,8 +69,9 @@ const WorkoutPlan = () => {
         </div>
       </div>
       {/* <h1 className="workouts-title">Your workouts</h1> */}
-      <ExerciseDetail goal={goal} />
       <WaterTracker />
+      <ExerciseDetail goal={goal} />
+      
     </div>
   );
 };

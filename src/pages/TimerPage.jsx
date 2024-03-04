@@ -20,13 +20,13 @@ const TimerPage = () => {
   }, []);
 
   return (
-    <div className="timer-block">
+    <div className="timer-block container-fluid">
       <div className="description">
         <h2 className="description-header">{exercise.name}</h2>
         <p className="description-text">{exercise.instructions}</p>
       </div>
       <div className="video-container">
-        <h2 className="description-header">Warm Up</h2>
+        <h2 className="demonstration-header">Warm Up</h2>
         <div className="iframe-wrapper">
           <iframe
             width="560"
@@ -39,7 +39,7 @@ const TimerPage = () => {
         </div>
       </div>
       <div className="demonstration">
-        <h2 className="demonstration-header">Video/GIF Demonstration</h2>
+        <h2 className="demonstration-header">Demo</h2>
         <div className="iframe-wrapper">
           <iframe src={exercise.gifUrl} width="560" height="315"></iframe>
         </div>

@@ -42,7 +42,7 @@ const ProgressTracker = () => {
           </div>
           <div className="description-text">
             <h5 className="description-text-title">Water Intake</h5>
-            <p> {waterIntake}</p>
+            <p> {waterIntake} ml</p>
           </div>
           <div className="description-text">
             <h5 className="description-text-title">Goals achieved</h5>
