@@ -5,6 +5,7 @@
   align-content: center;
   align-items: center;
   border: none;
+  justify-content: center;
 }
 
 .description {
@@ -45,5 +46,5 @@ button {
   transition: background-color 0.3s ease;
   border-radius: 15px;
   margin-left: 10px;
-  margin-bottom: 100px;
+  margin-bottom: 40px;
 }

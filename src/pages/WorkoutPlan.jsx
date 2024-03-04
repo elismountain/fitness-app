@@ -15,6 +15,7 @@ const WorkoutPlan = () => {
   // parse float the user input
   const height = parseFloat(searchParams.get("height"));
   const weight = parseFloat(searchParams.get("weight"));
+  
 
   const [bmi, setBmi] = useState("");
   const [exercise, setExercise] = useState([]);
