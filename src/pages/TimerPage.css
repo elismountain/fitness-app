@@ -3,28 +3,26 @@
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     font-size: 30px;
+    width: vw;
+    height: vh;
     text-transform: capitalize;
     color: white;
     text-align: center;
-    grid-template-columns: repeat(2, 1fr); /* Two columns layout for desktop */
-    grid-template-rows: auto auto auto; /* Auto rows */
-    gap: 20px; /* Adjust gap between grid items */
+    padding: 30px;
+    margin-bottom : 40px;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: auto auto auto; 
+    gap: 20px;
     grid-template-areas:
-      "description timer-wrap"
-      "video-container timer-wrap"
-      "demonstration timer-wrap";
+      "description description timer-wrap"
+      "video-container demonstration timer-wrap"
   }
   
   .description {
     grid-area: description;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: 300px; /* Minimum width for desktop */
-    height: auto; /* Auto height */
-    /* border: #b3072c solid 5px; */
-    border-radius: 10px;
-    margin-left: 20px;
+    display: grid;
+    min-width: 300px; 
+    height: auto;
   }
   
   .description-header {
@@ -39,55 +37,51 @@
   
   .demonstration {
     grid-area: demonstration;
-    min-width: 300px; 
-    height: auto; 
-    display: block;
-    border: #b3072c solid 5px;
-    border-radius: 10px;
-    margin-left: 20px;
+    height: 400px; 
+    display: grid;
+    background: transparent;
     overflow: hidden; 
-    margin-left: 20px;
-    border-radius: 10px; 
-    border: #b3072c solid 5px;
+    /* border-radius: 10px;  */
     }
 
     .video-container{
       grid-area: video-container;
       min-width: 300px; 
-      height: auto; 
-      display: block;
-      border: #b3072c solid 5px;
+      height: 100%; 
+      display: grid;
       border-radius: 10px;
-      margin-left: 20px;
-      overflow: hidden; 
-      margin-left: 20px;
+      overflow: hidden;
       border-radius: 10px; 
-      border: #b3072c solid 5px;
+  
     }
   .iframe-wrapper {
     position: relative;
-    width: 100%; /* Full width of the container */
-    padding-top: 56.25%; /* Aspect ratio for 16:9 videos */
+    width: 100%; 
+    padding-top: 56.25%; 
+    overflow: hidden;
   }
   
   .iframe-wrapper iframe {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    border: none; /* Removes the border around the iframe */
+    /* width: 100%; */
+    /* height: 100%; */
+    border: none; 
+    overflow: hidden;
   }
 
   
   .demonstration-header {
-    margin-top: 20px;
+    /* margin-top: 20px; */
     text-transform: uppercase;
+
   }
   
   .timer-wrap {
     grid-area: timer-wrap;
   }
+  
   
   /* Media query for mobile devices */
   @media (max-width: 970px) {
@@ -104,8 +98,8 @@
     .description,
     .video-container,
     .demonstration {
-      min-width: 65%;
-      margin: 10px 20px; /* Add margin on both sides */
+      min-width: 100%;
+      /* margin: 10px 20px;  */
     }
   }
   

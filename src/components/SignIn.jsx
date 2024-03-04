@@ -78,7 +78,7 @@ const SignIn = ({ onSubmit }) => {
         <Col>
           <Form onSubmit={handleSubmit} style={{ minWidth: '700px' }}>
             <Form.Group controlId="name">
-              <Form.Label style={{ color:  'white'}}>Name:</Form.Label>
+              <Form.Label style={{ color:  'white', fontSize : "1.5rem", margin : "10px"}}>Name :</Form.Label>
               <Form.Control
                 type="text"
                 value={name}
@@ -89,7 +89,7 @@ const SignIn = ({ onSubmit }) => {
               <Form.Control.Feedback style={{color : "white", fontSize : "20px"}} type="invalid">{nameError}</Form.Control.Feedback>
             </Form.Group>
             <Form.Group controlId="age">
-              <Form.Label style={{ color:  'white'}}>Age:</Form.Label>
+              <Form.Label style={{ color:  'white',fontSize : "1.5rem", margin : "10px"}}>Age :</Form.Label>
               <Form.Control
                 type="number"
                 value={age}
@@ -101,7 +101,7 @@ const SignIn = ({ onSubmit }) => {
               <Form.Control.Feedback style={{color : "white", fontSize : "20px"}} type="invalid">{ageError}</Form.Control.Feedback>
             </Form.Group>
             <Form.Group controlId="weight">
-              <Form.Label style={{ color:  'white'}}>Weight (in kg) : </Form.Label>
+              <Form.Label style={{ color:  'white',fontSize : "1.5rem", margin : "10px"}}>Weight (in kg) : </Form.Label>
               <Form.Control
                 type="number"
                 value={weight}
@@ -113,7 +113,7 @@ const SignIn = ({ onSubmit }) => {
               <Form.Control.Feedback style={{color : "white", fontSize : "20px"}} type="invalid">{weightError}</Form.Control.Feedback>
             </Form.Group>
             <Form.Group controlId="height">
-              <Form.Label style={{ color:  'white'}}>Height (in meter) :</Form.Label>
+              <Form.Label style={{ color:  'white',fontSize : "1.5rem", margin : "10px"}}>Height (in meter) :</Form.Label>
               <Form.Control
                 type="number"
                 step="0.01"
@@ -128,7 +128,7 @@ const SignIn = ({ onSubmit }) => {
               <Form.Control.Feedback style={{color : "white", fontSize : "20px"}} type="invalid">{heightError}</Form.Control.Feedback>
             </Form.Group>
             <Form.Group controlId="goal">
-              <Form.Label style={{ color:  'white'}}>Goal:</Form.Label>
+              <Form.Label style={{ color:  'white', fontSize : "1.5rem", margin : "10px"}}>Goal :</Form.Label>
               <Form.Control
                 as="select"
                 name={goal}
