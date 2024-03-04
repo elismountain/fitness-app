@@ -75,9 +75,9 @@ const WorkoutPlan = () => {
       <WaterTracker />
       <ExerciseDetail goal={goal} />
 
-      <div className="container-fluid d-flex justify-content-center align-items-center" style={{ height: "10%" }}>
+      {/* <div className="container-fluid d-flex justify-content-center align-items-center" style={{ height: "10%" }}>
   <Link to="/ProgressTracker" className="progress-button" style={{ textAlign: "center" }}>View Progress</Link>
-</div>
+</div> */}
 
      
 
