@@ -16,7 +16,7 @@ const MyNavbar = () => {
           alt="Logo" 
           width="120" 
           height="120" 
-          className="d-inline-block align-top" bootstrap class for alignment
+          className="d-inline-block align-top" 
         />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" /> {/* The toggle button */}

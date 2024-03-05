@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 
 const TimerPage = () => {
   const location = useLocation();
+  const [isTimerActive, setIsTimerActive] = useState(false); 
   const [exercise, setExercise] = useState(location.state?.exercise || {});
   console.log("Received exercise: ", exercise);
 
@@ -19,6 +20,21 @@ const TimerPage = () => {
       setExercise(JSON.parse(storedExercise));
     }
   }, []);
+
+  
+    // Function to update timer state
+    const handleTimerStateChange = (isActive) => {
+      setIsTimerActive(isActive);
+    };
+
+
+      // navigation prevention
+  const handleProgressClick = (e) => {
+    if (isTimerActive) {
+      e.preventDefault(); 
+      alert("Please stop the timer before viewing your progress.");
+    }
+  };
 
   return (
     <>
@@ -47,15 +63,25 @@ const TimerPage = () => {
         </div>
       </div>
       <div className="timer-wrap">
-        <Timer />
-      </div>
+  <Timer onTimerStateChange={handleTimerStateChange}/>
+</div>
       
     </div>
     <div className="container-fluid d-flex justify-content-center align-items-center" style={{ height: "10%" }}>
-  <Link to="/ProgressTracker" className="progress-button" style={{ textAlign: "center" }}>View Progress</Link>
+    <Link to="/ProgressTracker" className={`progress-button ${isTimerActive ? 'disabled-link' : ''}`} onClick={handleProgressClick} style={{ textAlign: "center" }}>
+          View Progress
+        </Link>
 </div>
 </>
   );
 };
 
 export default TimerPage;
+
+
+
+
+ 
+
+
+
