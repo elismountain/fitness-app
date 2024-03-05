@@ -19,12 +19,24 @@ const MyNavbar = () => {
               style={{
                 color: "white",
                 fontSize: "1.6rem",
-                marginRight: "500px",
+                marginRight: "400px",
                 textDecoration: "none",
               }}
               to="/"
             >
               HappyFiit
+            </Link>
+            <Link
+              style={{
+                color: "white",
+                fontSize: "1.3rem",
+                padding: "5px",
+                marginRight: "40px",
+                textDecoration: "none",
+              }}
+              to="/workout-plan"
+            >
+              Dashboard
             </Link>
             <Link
               style={{

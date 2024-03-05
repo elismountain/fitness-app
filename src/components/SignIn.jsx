@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 import './SignIn.css';
 
@@ -73,6 +73,12 @@ const SignIn = ({ onSubmit }) => {
     setGoal('');
   };
 
+
+  useEffect(() => {
+    console.log(localStorage.getItem('goal')); 
+    setGoal(localStorage.getItem('goal') || '');
+  }, []);
+  
   return (
     <Container className="d-flex justify-content-center align-items-center vh-35">
       <Row>
@@ -132,7 +138,7 @@ const SignIn = ({ onSubmit }) => {
               <Form.Label style={{ color:  'white', fontSize : "1.5rem", margin : "10px"}}>Goal :</Form.Label>
               <Form.Control
                 as="select"
-                name={goal}
+                value={goal}
                 onChange={(e) => setGoal(e.target.value)}
                 isInvalid={!!goalError}
               >

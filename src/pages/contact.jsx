@@ -24,6 +24,7 @@ const Contact = () => {
 
 
   return (
+    <>
     <div className="container contact-form">
       <h2 className="contact-header">Contact Us</h2>
       <form onSubmit={handleSubmit}>
@@ -49,13 +50,25 @@ const Contact = () => {
               padding: '10px 20px',
               fontWeight: 'bold',
               marginTop: '30px',
-              marginBottom: '290px',
+              marginBottom: '50px',
               outline: 'none'}}>
                 Submit</button>
         </div>
 
       </form>
     </div>
+    <div className='container-fluid d-flex flex-column align-items-center' style={{color: "white", textAlign: "center", padding : "30px"}}>
+  <h5 style={{fontSize : "2rem", margin: "20px 0"}}>The Team</h5> 
+  <a href="https://github.com/aleisharhys" target='_blank' style={{margin: "10px 0", color : "orange", textDecoration: "none", fontSize : "1.5rem"}}>ALEISHA</a>
+  <a href="https://github.com/AndyFt" target='_blank' style={{margin: "10px 0",color : "orange", textDecoration: "none", fontSize : "1.5rem"}}>ANDREA</a>
+   <a href="https://github.com/chrisma89" target='_blank' style={{margin: "10px 0", color : "orange", textDecoration: "none", fontSize : "1.5rem"}}>CHRISMA</a>
+  <a href="https://github.com/elismountain" target='_blank' style={{margin: "10px 0", color : "orange", textDecoration: "none", fontSize : "1.5rem"}}>OLGA</a>
+  <a href="https://github.com/SamiraBalayoglu" target='_blank' style={{margin: "10px 0", color : "orange", textDecoration: "none", fontSize : "1.5rem"}}>SAMIRA</a>
+ 
+ 
+</div>
+
+     </>
   );
 }
 
