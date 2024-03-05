@@ -62,27 +62,27 @@ const Contact = () => {
     <div className='container-fluid d-flex flex-wrap justify-content-center' style={{color: "white", textAlign: "center", padding : "30px"}}>
   <div className="member">
     <a href="https://github.com/aleisharhys" target='_blank' style={{color : "white", textDecoration: "none", fontSize : "1.5rem"}}>
-      <img src="src/assets/images/Aleisha.jpg" alt="Aleisha" style={{marginBottom: "10px", width: "200px", height: "200px"}} /> <br/> Aleisha Rhys
+      <img src="public/Aleisha.jpg" alt="Aleisha" style={{marginBottom: "10px", width: "200px", height: "200px"}} /> <br/> Aleisha Rhys
     </a>
   </div>
   <div className="member">
     <a href="https://github.com/AndyFt" target='_blank' style={{color : "white", textDecoration: "none", fontSize : "1.5rem"}}>
-      <img src="src/assets/images/Andrea.jpg" alt="Andrea" style={{marginBottom: "10px", width: "200px", height: "200px"}} /> <br/> Andrea Fontana
+      <img src="public/Andrea.jpg" alt="Andrea" style={{marginBottom: "10px", width: "200px", height: "200px"}} /> <br/> Andrea Fontana
     </a>
   </div>
   <div className="member">
     <a href="https://github.com/chrisma89" target='_blank' style={{color : "white", textDecoration: "none", fontSize : "1.5rem"}}>
-      <img src="src/assets/images/Chrisma.jpg" alt="Chrisma" style={{marginBottom: "10px", width: "200px", height: "200px"}} /> <br/> Chrisma Stephen
+      <img src="public/Chrisma.jpg" alt="Chrisma" style={{marginBottom: "10px", width: "200px", height: "200px"}} /> <br/> Chrisma Stephen
     </a>
   </div>
   <div className="member">
     <a href="https://github.com/elismountain" target='_blank' style={{color : "white", textDecoration: "none", fontSize : "1.5rem"}}>
-      <img src="src/assets/images/Olga.jpg" alt="Olga" style={{marginBottom: "10px", width: "200px", height: "200px"}} /> <br/> Olga Avramenko
+      <img src="public/Olga.jpg" alt="Olga" style={{marginBottom: "10px", width: "200px", height: "200px"}} /> <br/> Olga Avramenko
     </a>
   </div>
   <div className="member">
     <a href="https://github.com/SamiraBalayoglu" target='_blank' style={{color : "white", textDecoration: "none", fontSize : "1.5rem"}}>
-      <img src="src/assets/images/Samira.jpg" alt="Samira" style={{marginBottom: "10px", width: "200px", height: "200px"}} /> <br/> Samira Balayoglu
+      <img src="public/Samira.jpg" alt="Samira" style={{marginBottom: "10px", width: "200px", height: "200px"}} /> <br/> Samira Balayoglu
     </a>
   </div>
 </div>
