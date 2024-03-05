@@ -12,4 +12,12 @@
 }
 
 
+.member {
+    width: 100%;
+    max-width: 200px; /* Limit the width of each member on larger screens */
+    margin: 10px;
+    text-align: center;
+    /* width: calc(20% - 20px);  */
+  }
+
 

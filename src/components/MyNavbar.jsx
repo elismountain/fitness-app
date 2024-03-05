@@ -50,56 +50,55 @@ const MyNavbar = () => {
             </Link>
             </div>
             <div className="navbar-links">
-              <Link
-                style={{
-                  color: "white",
-                  fontSize: "1.3rem",
-                  padding: "5px",
-                  marginRight: "40px",
-                  textDecoration: "none",
-                  display: displayNavbarLinks
-                }}
-                to="/workout-plan"
-              >
-                Dashboard
-              </Link>
-              <Link
-                style={{
-                  color: "white",
-                  fontSize: "1.3rem",
-                  padding: "5px",
-                  marginRight: "40px",
-                  textDecoration: "none",
-                  display: displayNavbarLinks
-                }}
-                to="/ExerciseDetail"
-              >
-                Exercises
-              </Link>
-              <Link
-                style={{
-                  color: "white",
-                  fontSize: "1.3rem",
-                  padding: "5px",
-                  marginRight: "40px",
-                  textDecoration: "none",
-                  display: displayNavbarLinks
-                }}
-                to="/ProgressTracker"
-              >
-                Progress Tracker
-              </Link>
-              <Link
-                style={{
-                  color: "white",
-                  fontSize: "1.3rem",
-                  padding: "5px",
-                  textDecoration: "none",
-                }}
-                to="/contact"
-              >
-                Contact Us
-              </Link>
+            <Link
+              style={{
+                color: "white",
+                fontSize: "1.3rem",
+                padding: "5px",
+                marginRight: "40px",
+                textDecoration: "none",
+              }}
+              to="/workout-plan"
+            >
+              Dashboard
+            </Link>
+            <Link
+              style={{
+                color: "white",
+                fontSize: "1.3rem",
+                padding: "5px",
+                marginRight: "40px",
+                textDecoration: "none",
+              }}
+              to="/ExerciseDetail"
+            >
+              Exercises
+            </Link>
+            <Link
+              style={{
+                color: "white",
+                fontSize: "1.3rem",
+                padding: "5px",
+                marginRight: "40px",
+                textDecoration: "none",
+              }}
+              to="/ProgressTracker"
+            >
+              Progress Tracker
+            </Link>
+            <Link
+              style={{
+                color: "white",
+                fontSize: "1.3rem",
+                padding: "5px",
+                textDecoration: "none",
+              }}
+              to="/contact"
+            >
+              Team
+            </Link>
+/Link>
+
             </div>
           </Nav>
         </Navbar.Collapse>
