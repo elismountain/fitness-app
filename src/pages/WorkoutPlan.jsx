@@ -17,27 +17,21 @@ const WorkoutPlan = () => {
   const weight = parseFloat(searchParams.get("weight"));
 
   const storedHeight = localStorage.getItem("height");
-  const userHeight = height || storedHeight
+  const userHeight = height || storedHeight;
 
   const storedWeight = localStorage.getItem("weight");
-  const userWeight = weight || storedWeight
+  const userWeight = weight || storedWeight;
 
   const storedGoal = localStorage.getItem("goal");
-  const goal =  usergoal || storedGoal
-
-  
+  const goal = usergoal || storedGoal;
 
   const [bmi, setBmi] = useState("");
   const [exercise, setExercise] = useState([]);
   const [weightCategory, setWeightCategory] = useState("");
 
-
   // re using saved data from local storage
-  const storedName = localStorage.getItem("name")
-  const userName = username || storedName
-
-
-
+  const storedName = localStorage.getItem("name");
+  const userName = username || storedName;
 
   useEffect(() => {
     const userBMI = userWeight / (userHeight * userHeight);
@@ -76,7 +70,9 @@ const WorkoutPlan = () => {
           Hello , {userName}
         </h2>
         <div className="emoji-wrapper">
-          <p className="bmi-feeling" style={{textTransform: "capitalize"}}>How are you feeling today?</p>
+          <p className="bmi-feeling" style={{ textTransform: "capitalize" }}>
+            How are you feeling today?
+          </p>
           <div className="emojiTracker">{EmojiTracker()}</div>
         </div>
 
@@ -89,7 +85,7 @@ const WorkoutPlan = () => {
       </div>
       <WaterTracker />
       <ExerciseDetail goal={goal} />
-      </div>
+    </div>
   );
 };
 

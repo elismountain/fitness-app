@@ -89,7 +89,7 @@
 
 @media (max-width: 970px) {
   .bmi-container {
-    grid-template-columns: 1fr; /* Single column layout for mobile */
+    grid-template-columns: 1fr; 
     grid-template-areas:
       "bmi-name"
       "bmi-result"
