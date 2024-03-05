@@ -1,70 +1,107 @@
-# EDX Bootcamp - Fitness App
+# HAPPYFIIT - Fitness App
 
-Wonder Woman Workout Fitness App
+HappyFiit is a comprehensive fitness application crafted to cater to the needs of fitness enthusiasts, regardless of gender, providing an array of resources and tools to aid users in their journey to achieve and maintain optimal fitness levels. Developed as the culminating project for the edX "Front End Development" Bootcamp, HappyFiit embodies a commitment to fostering a healthy lifestyle through technology.
 
-## Available Scripts
+## How to Run Locally
 
-In the project directory, you can run:
+To run the project locally, follow these steps:
 
-### `npm start`
+1. Clone the repository to your local machine:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+   ```bash
+   git clone https://github.com/elismountain/fitness-app
+   ```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Navigate to the project directory:
 
-### `npm test`
+   ```bash
+   cd happyfiit
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Install dependencies:
 
-### `npm run build`
+   ```bash
+   npm install
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Add API key from Rapid API:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   - You can your API key using this link https://docs.rapidapi.com/docs/keys-and-key-rotation from rapid api.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   - After geting your key you need to set it in the file exerciseapi.js
 
-### `npm run eject`
+   ```
+   // add own api key
+   let rapidApiKey = "Your_RapidAPI_Key";
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Start the development server:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   npm run dev
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Once the server is running, open your web browser and navigate to [http://localhost:5173](http://localhost:5173) to view the application.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Usage
 
-## Learn More
+To use HappyFiit App, follow these steps:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. **Fill the Form on the Main Page**: Enter your name, age, weight, height, and goal in the form on the main page. Then press the "I am ready" button.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. **View BMI Result and Water Intake Tracker**: Upon reaching the workout page, you'll see your BMI result and water intake tracker. You can also select your exercise from the available options.
 
-### Code Splitting
+3. **Start Exercise Timer**: After selecting an exercise, you'll be directed to the timer page where you'll find a description of the workout and a 10-minute timer. For a 5-minute warm-up, watch the YouTube video [here](https://www.youtube.com/watch?v=qZkxKTxXY8M). Once you press the start button, the countdown begins.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4. **Track Progress**: To view your progress, click on the "View Progress" button on the progress tracker page. Here, you'll find details about your progress.
 
-### Analyzing the Bundle Size
+## API Used
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+HappyFiit integrates with the following APIs to enhance its functionality:
 
-### Making a Progressive Web App
+- **Workout Images API:** Integrates an API to fetch images related to various workout routines, enhancing user engagement and visual appeal within the application.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Features
 
-### Advanced Configuration
+HappyFiit offers a variety of features to help users track their fitness progress and maintain a healthy lifestyle:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- **Progress Tracker:** Keep track of your fitness progress over time, allowing you to set and achieve your fitness goals effectively.
 
-### Deployment
+- **Water Intake Tracker:** Monitor your daily water intake to ensure proper hydration throughout the day, promoting overall well-being.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- **BMI Calculator:** Calculate your Body Mass Index (BMI) to assess your body composition and monitor changes in your weight and fitness levels.
 
-### `npm run build` fails to minify
+## Technologies Used
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- React
+- Vite
+- React Bootstrap
+- Material UI
+- Google Fonts
+- Rapid API
+- Git
+- Netlify
+
+## Project Contributors
+
+- Aleisha Rhys
+- Andrea Nt Fontana
+- Chrisma Stephen
+- Olga Avramenko
+- Samira Balayoglu
+
+### Teaching Assistant
+
+- Zakariya Hussain
+
+## Deployment
+
+The project has been deployed to Netlify. You can access it [here.](https://happyfiit.netlify.app/)
+
+## The link to Github Repository
+
+The project's repository can be found [here.](https://github.com/elismountain/fitness-app)
+
+## Home Page Screenshot
+
+![HappyFiit Main Page](/src/assets/images/screenshot.png)

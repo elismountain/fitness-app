@@ -1,12 +1,11 @@
 import axios from 'axios';
 
 const exerciseAPI = async (goal) => {
-  let goal1 =goal .toLowerCase()
-  // let goal2=storedGoal.toLowerCase()
-  console.log(goal1)
+  let goal1 = goal.toLowerCase();
+  console.log(`Goal to API call ${goal1}`);
 
   // add own api key
-  let rapidApiKey = ""
+  let rapidApiKey = "";
 
   const options = {
     method: 'GET',
