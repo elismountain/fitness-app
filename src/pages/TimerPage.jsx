@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Timer from "../components/Timer";
 import "./TimerPage.css";
+import { Link } from 'react-router-dom';
 
 const TimerPage = () => {
   const location = useLocation();
@@ -20,6 +21,7 @@ const TimerPage = () => {
   }, []);
 
   return (
+    <>
     <div className="timer-block container-fluid">
       <div className="description">
         <h2 className="description-header">{exercise.name}</h2>
@@ -40,14 +42,19 @@ const TimerPage = () => {
       </div>
       <div className="demonstration">
         <h2 className="demonstration-header">Demo</h2>
-        <div className="iframe-wrapper">
+        <div className="iframe-wrapper_video">
           <iframe src={exercise.gifUrl} width="560" height="315"></iframe>
         </div>
       </div>
       <div className="timer-wrap">
         <Timer />
       </div>
+      
     </div>
+    <div className="container-fluid d-flex justify-content-center align-items-center" style={{ height: "10%" }}>
+  <Link to="/ProgressTracker" className="progress-button" style={{ textAlign: "center" }}>View Progress</Link>
+</div>
+</>
   );
 };
 
