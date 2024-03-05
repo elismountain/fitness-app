@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Navbar, Container, Nav } from "react-bootstrap";
-import Logo from "../assets/images/Logo.png";
+// import Logo from "../assets/images/Logo-2.png";
+import Logo from "../assets/icons/favicon.ico";
 import "../styles/Navbar.css";
 import { auto } from "@popperjs/core";
 
@@ -10,7 +11,13 @@ const MyNavbar = () => {
     <Navbar style={{ backgroundColor: 'rgba(0, 0, 0, 0.089)', marginBottom : "40px" }} variant="dark" expand="lg">
       <Container>
         <Navbar.Brand to="#home">
-          {/* Your Logo here */}
+        <img
+          src={Logo} 
+          alt="Logo" 
+          width="120" 
+          height="120" 
+          className="d-inline-block align-top" bootstrap class for alignment
+        />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" /> {/* The toggle button */}
         <Navbar.Collapse id="basic-navbar-nav"> {/* Collapsible content */}
