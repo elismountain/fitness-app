@@ -1,13 +1,13 @@
 .main-exercise-container {
+  max-width: 80%;
   align-items: center;
-  justify-content: space-evenly;
-  margin: 15px 77.5px;
+  justify-content: space-around;
+  margin: auto;
   padding-bottom: 25px;
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
   border-radius: 15px;
-  /* background: white; */
 }
 
 .exercise-container {

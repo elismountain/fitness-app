@@ -1,71 +1,71 @@
 .exercise-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; 
-  }
-  
-  .exercise-list > div {
-    width: calc(50% - 20px); 
-    margin-bottom: 20px; 
-  }
-  
-  .exercise-list > div img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .workouts-title {
-    text-align: center;
-    padding: 20px;
-    color: aliceblue;
-    margin-bottom: 50px;
-
-  }
-
-
-  .bmi-container {
-    display: grid; 
-    grid-template-columns: 1fr 1fr; 
-    grid-template-rows: auto auto 1fr ; 
-    gap: 0px 0px; 
-    grid-template-areas: 
-      "bmi-name bmi-name"
-      "bmi-result emoji-wrapper"
-      "main-exercise-container main-exercise-container";
-      padding: 30px;
-      color: aliceblue;
-
-  }
-
-  .main-exercise-container {
-    grid-area: main-exercise-container;
-  }
-
-  .bmi-name { 
-    grid-area: bmi-name;
-    text-align: center;
-    text-transform: uppercase;
-    margin-bottom: 20px;
- }
-
-  .bmi-result { 
-    padding-left: 120px;
-    grid-area: bmi-result; 
-    font-size: 25px;
-    
-
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
+.exercise-list > div {
+  width: calc(50% - 20px);
+  margin-bottom: 20px;
+}
 
-  .emoji-wrapper { 
-    padding-left: 120px;
-    grid-area: emoji-wrapper;
-    font-size: 25px;
-    text-transform: uppercase;
+.exercise-list > div img {
+  max-width: 100%;
+  height: auto;
+}
+
+.workouts-title {
+  text-align: center;
+  padding: 20px;
+  color: aliceblue;
+  margin-bottom: 50px;
+}
+
+.bmi-container {
+  margin: auto;
+  max-width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto 1fr;
+  gap: 0px 80px;
+  grid-template-areas:
+    "bmi-name bmi-name"
+    "bmi-result emoji-wrapper"
+    "main-exercise-container main-exercise-container";
+  padding: 30px;
+  color: aliceblue;
+}
+
+.main-exercise-container {
+  grid-area: main-exercise-container;
+}
+
+.bmi-name {
+  grid-area: bmi-name;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.bmi-result {
+  grid-area: bmi-result;
+  font-size: 25px;
+}
+
+.bmi-result,
+.emoji-wrapper p {
+  text-align: center;
+}
+
+.emoji-wrapper {
+  grid-area: emoji-wrapper;
+  font-size: 25px;
+  text-transform: uppercase;
 }
 
 .emojiTracker {
-    font-size: 45px;
+  font-size: 45px;
+  text-align: center;
 }
 .progress-button {
   background-color: orange;
@@ -81,15 +81,13 @@
   margin-bottom: 40px;
 }
 
-
 @media (max-width: 970px) {
-    .bmi-container {
-      grid-template-columns: 1fr; /* Single column layout for mobile */
-      grid-template-areas:
-        "bmi-name"
-        "bmi-result"
-        "emoji-wrapper"
-        "main-exercise-container";
-    }
+  .bmi-container {
+    grid-template-columns: 1fr; /* Single column layout for mobile */
+    grid-template-areas:
+      "bmi-name"
+      "bmi-result"
+      "emoji-wrapper"
+      "main-exercise-container";
   }
- 
+}
