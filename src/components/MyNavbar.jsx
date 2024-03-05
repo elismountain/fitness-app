@@ -97,7 +97,6 @@ const MyNavbar = () => {
             >
               Team
             </Link>
-/Link>
 
             </div>
           </Nav>

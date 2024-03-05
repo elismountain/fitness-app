@@ -16,3 +16,20 @@
   text-align: center;
   /* width: calc(20% - 20px);  */
 }
+
+.contact-button {
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 20px 30px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 15px;
+  margin-left: 10px;
+  
+}
+
+.contact-button:hover {
+  background-color: #b3072c;
+}
