@@ -54,7 +54,7 @@ const ProgressTracker = () => {
           </div>
         </div>
       </div>
-      <button onClick={clearData}>CLEAR ALL DATA</button>
+      {/* <button onClick={clearData}>CLEAR ALL DATA</button> */}
     </div>
   );
 };

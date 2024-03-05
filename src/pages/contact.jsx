@@ -17,9 +17,16 @@ const Contact = () => {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault(); 
-    console.log('Form Data:', formData); 
-    alert("Thanks! We will be in touch!"); 
+    e.preventDefault();
+    
+  
+    if (!formData.name || !formData.email || !formData.message) {
+      alert("Please fill in all fields"); 
+    } else {
+      console.log('Form Data:', formData); 
+      alert("Thanks! We will be in touch!"); 
+    
+    }
   };
 
 
