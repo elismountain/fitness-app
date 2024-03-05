@@ -84,15 +84,19 @@ HappyFiit offers a variety of features to help users track their fitness progres
 
 ## Project Contributors
 
-- Aleisha Rhys
-- Andrea Nt Fontana
-- Chrisma Stephen
-- Olga Avramenko
-- Samira Balayoglu
+- [Aleisha Rhys](https://github.com/aleisharhys)
+- [Andrea Nt Fontana](https://github.com/AndyFt)
+- [Chrisma Stephen](https://github.com/chrisma89)
+- [Olga Avramenko](https://github.com/elismountain)
+- [Samira Balayoglu](https://github.com/SamiraBalayoglu)
 
 ### Teaching Assistant
 
 - Zakariya Hussain
+
+## Credits
+ 
+Thanks to [Becky Fox](https://www.thebeckyfox.com/) for the warm up video. The video is [here.](https://www.youtube.com/watch?v=qZkxKTxXY8M&t=2s)
 
 ## Deployment
 
