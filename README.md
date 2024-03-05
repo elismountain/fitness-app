@@ -59,7 +59,7 @@ To use HappyFiit App, follow these steps:
 
 HappyFiit integrates with the following APIs to enhance its functionality:
 
-- **Workout Images API:** Integrates an API to fetch images related to various workout routines, enhancing user engagement and visual appeal within the application.
+- **ExerciseDB API:** Integrates an API to fetch images related to various workout routines, enhancing user engagement and visual appeal within the application. You can view the API [here.](https://rapidapi.com/justin-WFnsXH_t6/api/exercisedb)
 
 ## Features
 
@@ -71,28 +71,43 @@ HappyFiit offers a variety of features to help users track their fitness progres
 
 - **BMI Calculator:** Calculate your Body Mass Index (BMI) to assess your body composition and monitor changes in your weight and fitness levels.
 
+- **Mood Tracker:** Log your mood into the app to keep track of your emotional well-being.
+
+- **Timer:** The app features an integrated timer that allows users to time their exercises. The duration of each exercise is automatically logged into the progress tracker for easy access.
+
+- **Warm-Up:** The app includes an integrated warm-up video, allowing users to engage in a warm-up session should they choose to do so.
+
+- **Exercise Demonstration** Users can view a selection of demonstration GIFs tailored to their goals, as chosen on the sign-in page. This allows users to select the exercises they wish to perform.
+
+
 ## Technologies Used
 
 - React
+- Node.js
 - Vite
 - React Bootstrap
 - Material UI
 - Google Fonts
 - Rapid API
 - Git
+- Github
 - Netlify
 
 ## Project Contributors
 
-- Aleisha Rhys
-- Andrea Nt Fontana
-- Chrisma Stephen
-- Olga Avramenko
-- Samira Balayoglu
+- [Aleisha Rhys](https://github.com/aleisharhys)
+- [Andrea Nt Fontana](https://github.com/AndyFt)
+- [Chrisma Stephen](https://github.com/chrisma89)
+- [Olga Avramenko](https://github.com/elismountain)
+- [Samira Balayoglu](https://github.com/SamiraBalayoglu)
 
 ### Teaching Assistant
 
 - Zakariya Hussain
+
+## Credits
+ 
+Thanks to [Becky Fox](https://www.thebeckyfox.com/) for the warm up video. The video is [here.](https://www.youtube.com/watch?v=qZkxKTxXY8M&t=2s)
 
 ## Deployment
 
