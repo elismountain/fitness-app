@@ -1,5 +1,5 @@
 import React from 'react';
-import './Timer.css';
+import '../styles/Timer.css';
 
 const TimerRecordsTable = ({ records }) => {
  

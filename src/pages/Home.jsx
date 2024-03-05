@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import SignIn from '../components/SignIn';
-import './Home.css';
+import '../styles/Home.css';
 
 
 const Home = () => {

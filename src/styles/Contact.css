@@ -11,5 +11,11 @@
     margin-bottom: 50px;
 }
 
+.contact-button {
+    background-color: orange;
+    transition: background-color 0.3s ease;
+}
 
-
+.contact-button:hover {
+    background-color: #b3072c;
+}
