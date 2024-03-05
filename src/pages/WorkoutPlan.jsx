@@ -78,7 +78,7 @@ const WorkoutPlan = () => {
           Hello , {userName}
         </h2>
         <div className="emoji-wrapper">
-          <p className="bmi-feeling">How are you feeling today?</p>
+          <p className="bmi-feeling" style={{textTransform: "capitalize"}}>How are you feeling today?</p>
           <div className="emojiTracker">{EmojiTracker()}</div>
         </div>
 

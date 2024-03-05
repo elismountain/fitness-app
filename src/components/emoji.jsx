@@ -21,7 +21,7 @@ const EmojiTracker = () => {
             <button
               key={index}
               onClick={() => handleEmojiClick(emoji)}
-              style={{ background: 'none', border: 'none', cursor: 'pointer' }}
+              style={{ background: 'none', border: 'none', cursor: 'pointer' ,fontSize : "2.5rem"}}
             >
               {emoji}
             </button>
