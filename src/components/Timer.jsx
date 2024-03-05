@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Timer.css';
 import TimerRecordsTable from './TimerRecordsTable'; 
 
-const Timer = () => {
+const Timer = ({onTimerStateChange}) => {
   const [time, setTime] = useState(600); 
   const [timerOn, setTimerOn] = useState(false);
   const [isPaused, setIsPaused] = useState(false); 
@@ -17,8 +17,10 @@ const Timer = () => {
       interval = setInterval(() => {
         setTime(prevTime => prevTime - 1);
       }, 1000);
+      onTimerStateChange(true)
     } else if (time === 0 || isPaused) {
       clearInterval(interval);
+      onTimerStateChange(isPaused)
       if (!isPaused) {
         setTimerOn(false);
         const endTime = new Date();
@@ -37,16 +39,19 @@ const Timer = () => {
     setTimerOn(true);
     setIsPaused(false); 
     setStartTime(new Date()); 
+    onTimerStateChange(true)
   };
 
   const pauseTimer = () => {
     setIsPaused(true); 
+    onTimerStateChange(false); 
   };
 
   const stopTimer = () => {
     if(startTime) {
       setTime(600); 
       setTimerOn(false);
+      onTimerStateChange(false);
       setIsPaused(false);
       const endTime = new Date();
       let durationInSeconds = Math.abs(endTime - startTime) / 1000; 
