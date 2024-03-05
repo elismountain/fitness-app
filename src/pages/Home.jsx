@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import SignIn from '../components/SignIn';
-import './Home.css';
+import '../styles/Home.css';
 
 
 const Home = () => {
@@ -17,6 +17,7 @@ const Home = () => {
       <h2 className="home-description">More than fitness, it's your happy place.</h2>
       <SignIn onSubmit={handleSubmit} />
     </div>
+    
   );
 };
 

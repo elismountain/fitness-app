@@ -1,6 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
+import './styles/App.css';
 import ExerciseDetail from './pages/ExerciseDetail';
 import Home from './pages/Home';
 import MyNavbar from './components/MyNavbar';
@@ -11,16 +11,12 @@ import Contact from './pages/contact';
 import WorkoutPlan from './pages/WorkoutPlan';
 import TimerPage from './pages/TimerPage';
 import { Box } from '@mui/material';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const App = () => {
-  const location = useLocation();
-  const pathsToShowNavbar = ['/exercise/', '/timer-page', '/contact',  '/ProgressTracker','/workout-plan', '/ExerciseDetail', '/TimerPage'];
-  const showNavbar = pathsToShowNavbar.some(path => location.pathname.startsWith(path));
-
   return (
     <Box width="400px" sx={{ width: { xl: '1488px' }}} m="auto">
-     {showNavbar && <MyNavbar />}
+      <MyNavbar />
       <Box>
       <Routes>
         <Route path="/" element={<Home />} />

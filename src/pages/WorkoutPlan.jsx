@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import EmojiTracker from "../components/emoji";
 import exerciseAPI from "../components/exerciseapi";
 import ExerciseDetail from "./ExerciseDetail";
-import "./WorkoutPlan.css";
+import "../styles/WorkoutPlan.css";
 import WaterTracker from "../components/watertracker";
 
 const WorkoutPlan = () => {
@@ -35,9 +35,6 @@ const WorkoutPlan = () => {
   // re using saved data from local storage
   const storedName = localStorage.getItem("name")
   const userName = username || storedName
-
-
-
 
   useEffect(() => {
     const userBMI = userWeight / (userHeight * userHeight);

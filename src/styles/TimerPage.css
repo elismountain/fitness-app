@@ -105,7 +105,6 @@
     grid-area: timer-wrap;
   }
   
-  
   /* Media query for mobile devices */
   @media (max-width: 970px) {
     .timer-block {

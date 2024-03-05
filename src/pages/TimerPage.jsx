@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Timer from "../components/Timer";
-import "./TimerPage.css";
+import "../styles/TimerPage.css";
 import { Link } from 'react-router-dom';
 
 const TimerPage = () => {

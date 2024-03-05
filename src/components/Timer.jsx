@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Timer.css';
+import '../styles/Timer.css';
 import TimerRecordsTable from './TimerRecordsTable'; 
 
 const Timer = ({onTimerStateChange}) => {

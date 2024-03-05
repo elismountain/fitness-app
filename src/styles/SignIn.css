@@ -1,3 +1,12 @@
+.button-container button {
+  background-color: orange;
+  transition: background-color 0.3s ease;
+}
+
+.button-container button:hover {
+  background-color: #b3072c;
+}
+
 Form {
   width: 700px;
 }
