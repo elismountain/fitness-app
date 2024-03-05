@@ -54,19 +54,41 @@ const Contact = () => {
               outline: 'none'}}>
                 Submit</button>
         </div>
-
       </form>
     </div>
-    <div className='container-fluid d-flex flex-column align-items-center' style={{color: "white", textAlign: "center", padding : "30px"}}>
-  <h5 style={{fontSize : "2rem", margin: "20px 0"}}>The Team</h5> 
-  <a href="https://github.com/aleisharhys" target='_blank' style={{margin: "10px 0", color : "orange", textDecoration: "none", fontSize : "1.5rem"}}>ALEISHA</a>
-  <a href="https://github.com/AndyFt" target='_blank' style={{margin: "10px 0",color : "orange", textDecoration: "none", fontSize : "1.5rem"}}>ANDREA</a>
-   <a href="https://github.com/chrisma89" target='_blank' style={{margin: "10px 0", color : "orange", textDecoration: "none", fontSize : "1.5rem"}}>CHRISMA</a>
-  <a href="https://github.com/elismountain" target='_blank' style={{margin: "10px 0", color : "orange", textDecoration: "none", fontSize : "1.5rem"}}>OLGA</a>
-  <a href="https://github.com/SamiraBalayoglu" target='_blank' style={{margin: "10px 0", color : "orange", textDecoration: "none", fontSize : "1.5rem"}}>SAMIRA</a>
- 
- 
+
+
+    <h5 style={{fontSize : "2rem", margin: "20px 0", textAlign: "center", color: "white"}}>Our Team</h5> 
+
+    <div className='container-fluid d-flex flex-wrap justify-content-center' style={{color: "white", textAlign: "center", padding : "30px"}}>
+  <div className="member">
+    <a href="https://github.com/aleisharhys" target='_blank' style={{color : "white", textDecoration: "none", fontSize : "1.5rem"}}>
+      <img src="src/assets/images/Aleisha.jpg" alt="Aleisha" style={{marginBottom: "10px", width: "200px", height: "200px"}} /> <br/> Aleisha Rhys
+    </a>
+  </div>
+  <div className="member">
+    <a href="https://github.com/AndyFt" target='_blank' style={{color : "white", textDecoration: "none", fontSize : "1.5rem"}}>
+      <img src="src/assets/images/Andrea.jpg" alt="Andrea" style={{marginBottom: "10px", width: "200px", height: "200px"}} /> <br/> Andrea Fontana
+    </a>
+  </div>
+  <div className="member">
+    <a href="https://github.com/chrisma89" target='_blank' style={{color : "white", textDecoration: "none", fontSize : "1.5rem"}}>
+      <img src="src/assets/images/Chrisma.jpg" alt="Chrisma" style={{marginBottom: "10px", width: "200px", height: "200px"}} /> <br/> Chrisma Stephen
+    </a>
+  </div>
+  <div className="member">
+    <a href="https://github.com/elismountain" target='_blank' style={{color : "white", textDecoration: "none", fontSize : "1.5rem"}}>
+      <img src="src/assets/images/Olga.jpg" alt="Olga" style={{marginBottom: "10px", width: "200px", height: "200px"}} /> <br/> Olga Avramenko
+    </a>
+  </div>
+  <div className="member">
+    <a href="https://github.com/SamiraBalayoglu" target='_blank' style={{color : "white", textDecoration: "none", fontSize : "1.5rem"}}>
+      <img src="src/assets/images/Samira.jpg" alt="Samira" style={{marginBottom: "10px", width: "200px", height: "200px"}} /> <br/> Samira Balayoglu
+    </a>
+  </div>
 </div>
+
+    
 
      </>
   );

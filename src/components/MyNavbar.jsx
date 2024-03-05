@@ -81,7 +81,7 @@ const MyNavbar = () => {
               }}
               to="/contact"
             >
-              Contact Us
+              Team
             </Link>
             </div>
           </Nav>
