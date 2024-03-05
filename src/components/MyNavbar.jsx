@@ -21,18 +21,21 @@ const MyNavbar = () => {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" /> {/* The toggle button */}
         <Navbar.Collapse id="basic-navbar-nav"> {/* Collapsible content */}
-          <Nav className="me-auto">
+          <Nav className="me-auto navbar-content">
+            <div className="navbar-title">
             <Link
               style={{
                 color: "white",
                 fontSize: "1.6rem",
-                marginRight: "400px",
+                // marginRight: "400px",
                 textDecoration: "none",
               }}
               to="/"
             >
               HappyFiit
             </Link>
+            </div>
+            <div className="navbar-links">
             <Link
               style={{
                 color: "white",
@@ -80,6 +83,7 @@ const MyNavbar = () => {
             >
               Contact Us
             </Link>
+            </div>
           </Nav>
         </Navbar.Collapse>
       </Container>
