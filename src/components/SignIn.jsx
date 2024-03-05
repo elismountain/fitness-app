@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
-import './SignIn.css';
+import '../styles/SignIn.css';
 
 
 const SignIn = ({ onSubmit }) => {
@@ -157,10 +157,9 @@ const SignIn = ({ onSubmit }) => {
               <Form.Control.Feedback style={{color : "white", fontSize : "20px"}} type="invalid">{goalError}</Form.Control.Feedback>
             </Form.Group>
             <br />
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <div className='button-container' style={{ display: 'flex', justifyContent: 'center' }}>
   <Button
     style={{
-      backgroundColor: 'orange',
       border: 'orange', 
       borderRadius: '10px',
       fontSize: '1.5rem',
