@@ -67,6 +67,12 @@
   font-size: 45px;
   text-align: center;
 }
+
+.emojiTracker button:hover {
+  transition: 0.5s;
+  transform: scale(1.2);
+}
+
 .progress-button {
   background-color: orange;
   text-decoration: none;
