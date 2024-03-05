@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./progresstracker.css";
+import "../styles/progresstracker.css";
 
 const ProgressTracker = () => {
   const [mood, setMood] = useState(localStorage.getItem("emoji") || "😐");

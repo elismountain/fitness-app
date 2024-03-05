@@ -87,6 +87,12 @@
   margin-bottom: 40px;
 }
 
+.progress-button:hover {
+  background-color: #b3072c;
+  text-decoration: none;
+  color: white;
+}
+
 @media (max-width: 970px) {
   .bmi-container {
     grid-template-columns: 1fr; /* Single column layout for mobile */

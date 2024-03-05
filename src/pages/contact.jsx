@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Contact.css';
+import '../styles/Contact.css';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -43,8 +43,7 @@ const Contact = () => {
         <div className="text-center">
           <button type="submit" className="btn btn-primary contact-button" 
           style={      
-            {backgroundColor: 'orange',
-              border: 'orange', 
+            {border: 'orange', 
               borderRadius: '10px',
               fontSize: '1.5rem',
               padding: '10px 20px',

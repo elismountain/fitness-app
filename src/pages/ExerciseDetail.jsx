@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Card from 'react-bootstrap/Card';
 import { useLocation } from "react-router-dom";
 import exerciseAPI from "../components/exerciseapi";
-import "./ExerciseDetail.css";
+import "../styles/ExerciseDetail.css";
 import { Link } from "react-router-dom";
 
 const ExerciseDetail = () => {
