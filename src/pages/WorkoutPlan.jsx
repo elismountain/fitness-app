@@ -36,9 +36,6 @@ const WorkoutPlan = () => {
   const storedName = localStorage.getItem("name")
   const userName = username || storedName
 
-
-
-
   useEffect(() => {
     const userBMI = userWeight / (userHeight * userHeight);
     setBmi(userBMI);

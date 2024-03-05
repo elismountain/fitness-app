@@ -17,6 +17,7 @@ const Home = () => {
       <h2 className="home-description">More than fitness, it's your happy place.</h2>
       <SignIn onSubmit={handleSubmit} />
     </div>
+    
   );
 };
 
