@@ -7,6 +7,7 @@ const exerciseAPI = async (goal) => {
   // add own api key
   let rapidApiKey = "";
 
+  // api call to exercisedb
   const options = {
     method: 'GET',
     params: {
@@ -18,8 +19,6 @@ const exerciseAPI = async (goal) => {
       'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
     }
   };
-
-  console.log(`Getting goal ${goal}`)
 
   try {
     const response = await axios.request(options);
