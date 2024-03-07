@@ -79,7 +79,6 @@ HappyFiit offers a variety of features to help users track their fitness progres
 
 - **Exercise Demonstration** Users can view a selection of demonstration GIFs tailored to their goals, as chosen on the sign-in page. This allows users to select the exercises they wish to perform.
 
-
 ## Technologies Used
 
 - React
@@ -106,12 +105,12 @@ HappyFiit offers a variety of features to help users track their fitness progres
 - Zakariya Hussain
 
 ## Credits
- 
+
 Thanks to [Becky Fox](https://www.thebeckyfox.com/) for the warm up video. The video is [here.](https://www.youtube.com/watch?v=qZkxKTxXY8M&t=2s)
 
 ## Deployment
 
-The project has been deployed to Netlify. You can access it [here.](https://happyfiit.netlify.app/)
+The project has been deployed to Netlify. You can access it [here.](https://happyfiit-pj.netlify.app/)
 
 ## The link to Github Repository
 
